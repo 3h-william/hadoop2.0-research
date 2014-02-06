@@ -3,6 +3,5 @@
 *.iws
 .idea
 .svn
-target
 hadoop-hdfs-project/hadoop-hdfs/downloads
 hadoop-hdfs-project/hadoop-hdfs-httpfs/downloads

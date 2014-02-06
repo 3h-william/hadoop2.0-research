@@ -1,0 +1,19 @@
+<projectDescription>
+  <name>hadoop-hdfs-nfs</name>
+  <comment>Apache Hadoop HDFS-NFS</comment>
+  <projects>
+    <project>hadoop-annotations</project>
+    <project>hadoop-auth</project>
+    <project>hadoop-common</project>
+    <project>hadoop-hdfs</project>
+    <project>hadoop-nfs</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

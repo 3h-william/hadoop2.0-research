@@ -1,0 +1,15 @@
+<projectDescription>
+  <name>hadoop-auth-examples</name>
+  <comment>Apache Hadoop Auth Examples - Java HTTP SPNEGO</comment>
+  <projects>
+    <project>hadoop-auth</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

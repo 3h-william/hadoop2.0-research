@@ -1,0 +1,23 @@
+<projectDescription>
+  <name>hadoop-tools-dist</name>
+  <comment>Apache Hadoop Tools Dist</comment>
+  <projects>
+    <project>hadoop-annotations</project>
+    <project>hadoop-archives</project>
+    <project>hadoop-datajoin</project>
+    <project>hadoop-distcp</project>
+    <project>hadoop-extras</project>
+    <project>hadoop-gridmix</project>
+    <project>hadoop-pipes</project>
+    <project>hadoop-rumen</project>
+    <project>hadoop-streaming</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
+</projectDescription>

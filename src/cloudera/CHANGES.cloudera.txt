@@ -1,0 +1,3580 @@
+commit bfe3968063356bdd1fcae3164cdde22aa0101418
+Author: Aaron T. Myers <atm@cloudera.com>
+Date:   Sat Oct 26 00:09:27 2013 -0700
+
+    HDFS-5433. When reloading fsimage during checkpointing, we should clear existing snapshottable directories. Contributed by Aaron T. Myers.
+    (cherry picked from commit 9777840704ae7d3a4e728e5331e2435ff1a5966d)
+
+commit 0b28ce37ef58fe4fc7685e5ddd4f3be6ba98b5e8
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Wed Oct 23 15:11:52 2013 -0700
+
+    CLOUDERA-BUILD. YARN-1343 NodeManagers additions/restarts are not reported as node updates in AllocateResponse responses to AMs
+
+commit 178de8595b8e2bb25ca3cc0c94836eae16a9374c
+Author: Aaron Twining Myers <atm@apache.org>
+Date:   Wed Oct 23 15:27:58 2013 +0000
+
+    HDFS-5403. WebHdfs client cannot communicate with older WebHdfs servers post HDFS-5306. Contributed by Aaron T. Myers.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-2.2@1535060 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 12074210dcce2888f0f1729b5c3dc69ef89bed04)
+    (cherry picked from commit 67daebb9e2dad0457d636a6c895f28ceb017b22d)
+
+commit 71db326ba734f48200aeb144e181e32f681be188
+Author: Sanford Ryza <sandy@apache.org>
+Date:   Tue Oct 22 23:53:32 2013 +0000
+
+    YARN-1330. Fair Scheduler: defaultQueueSchedulingPolicy does not take effect (Sandy Ryza)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/trunk@1534861 13f79535-47bb-0310-9956-ffa450edef68
+
+commit 9cc1786a0b1662920cbdbdf69497a6258a450d01
+Author: Suresh Srinivas <suresh@apache.org>
+Date:   Thu Oct 10 21:55:38 2013 +0000
+
+    HADOOP-10029. Specifying har file to MR job fails in secure cluster. Contributed by Suresh Srinivas.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/trunk@1531125 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit f22ee33910ed2772e15d3bde1de548cdec12069f)
+
+commit 015ca43a231002ebdb10c60341f792a7ae0a2c62
+Author: Sanford Ryza <sandy@apache.org>
+Date:   Tue Oct 15 21:14:47 2013 +0000
+
+    YARN-1295. In UnixLocalWrapperScriptBuilder, using bash -c can cause Text file busy errors. (Sandy Ryza)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/trunk@1532532 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit a2b238f626dae33642d2656dd8eae9ecc80aa44a)
+
+commit 28123c8d141ce18bd8137b5e08cb410ad2c90acb
+Author: Andrew Wang <wang@apache.org>
+Date:   Mon Oct 21 18:07:49 2013 +0000
+
+    Addendum fix for HADOOP-10052 (branch-2.2 only)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-2.2@1534298 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 24f8019b6244a4f12906ede69ce74eb8fe27ec50)
+
+commit 29501f078053b7bbc552525057da78121203a009
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Fri Oct 18 20:27:50 2013 -0700
+
+    CLOUDERA-BUILD. YARN-1321 NMTokenCache is a a singleton, prevents multiple AMs running in a single JVM to work correctly.
+
+commit 7879e7551cfaa4678bb87ff0399a58a1553af0a6
+Author: Robert Kanter <rkanter@cloudera.com>
+Date:   Fri Oct 18 12:48:19 2013 -0700
+
+    CLODUERA-BUILD. Reference root pom for tomcat version
+
+commit 4e5a5f12f3a21694fd4ab0d18e078b93f32d6617
+Author: Andrew Wang <wang@apache.org>
+Date:   Thu Oct 17 22:08:09 2013 +0000
+
+    HADOOP-10052. Temporarily disable client-side symlink resolution (branch-2.2 only change). (wang)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-2.2@1533273 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 689f84fa2987ca02f3ca03924d26f0f386456e8b)
+
+commit dfe1310d63a7c2b9177ab9fa21ddaf716e5f8539
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Tue Oct 8 14:21:50 2013 -0700
+
+    CLOUDERA-BUILD. C5b1 only. ZKFC-based automatic failover for RM HA
+    
+    (cherry picked from commit 18952b0900879f1b0fe972600e9e0af9d6218d2b)
+    
+    Conflicts:
+    	hadoop-yarn-project/hadoop-yarn/hadoop-yarn-api/src/main/java/org/apache/hadoop/yarn/conf/HAUtil.java
+    	hadoop-yarn-project/hadoop-yarn/hadoop-yarn-common/src/main/java/org/apache/hadoop/yarn/client/RMHAServiceTarget.java
+    	hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/RMServerUtils.java
+    	hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/TestRMHA.java
+
+commit f71b14ca90dfb2a54c9a5466d6aefc096a80c5cf
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Wed Sep 25 11:41:42 2013 -0700
+
+    CLOUDERA-BUILD. C5b1 only. Y-1222. ZK based fencing
+    
+    (cherry picked from commit faa42492606a3bfca09c0022d6cb54fff15173c6)
+    
+    Conflicts:
+    	hadoop-yarn-project/hadoop-yarn/hadoop-yarn-api/src/main/java/org/apache/hadoop/yarn/conf/HAUtil.java
+
+commit c6ea50a99acfb38dd8e86f4ab60ee909edaa9a4c
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Thu Sep 26 15:22:03 2013 -0700
+
+    CLOUDERA-BUILD. C5b1 only. Y-1068. Admin support for RM HA to facilitate transitions to Active and Standby.
+    
+    (cherry picked from commit bde18053763a9f8cf1529f076789c4731ccaed03)
+    
+    Conflicts:
+    	hadoop-yarn-project/hadoop-yarn/hadoop-yarn-api/src/main/java/org/apache/hadoop/yarn/conf/YarnConfiguration.java
+
+commit c18fcb14b8b010a3a4dbad6efa704633c95c3c0c
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Wed Sep 25 14:57:38 2013 -0700
+
+    CLOUDERA-BUILD. C5b1 only. Y-1028. ConfiguredFailoverProxyProvider to switch between RMs on successive attempts.
+    
+    (cherry picked from commit 40b0df7f4b4f076c4c63fa00bc9b058bfe7c3a7e)
+    
+    Conflicts:
+    	hadoop-yarn-project/hadoop-yarn/hadoop-yarn-client/src/main/java/org/apache/hadoop/yarn/client/ClientRMProxy.java
+    	hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-common/src/main/java/org/apache/hadoop/yarn/server/api/ServerRMProxy.java
+
+commit c633ce79970effba3b575bae3ece25654e7e211c
+Author: Bikas Saha <bikas@apache.org>
+Date:   Fri Oct 4 20:37:47 2013 +0000
+
+    Merge r1529251 from trunk to branch-2 for YARN-1232. Configuration to support multiple RMs (Karthik Kambatla via bikas)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-2@1529285 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 577bfb8b917a695740d5698f1388499946d5c182)
+    
+    Conflicts:
+    	hadoop-yarn-project/hadoop-yarn/hadoop-yarn-api/src/main/java/org/apache/hadoop/yarn/conf/YarnConfiguration.java
+    
+    (cherry picked from commit eb9e231bdb9bdd5c2ba3fdcf48407c96557309b5)
+
+commit cc791c2880b39dc9feda3deceb14d2c06b64ed36
+Author: Bikas Saha <bikas@apache.org>
+Date:   Mon Sep 16 18:40:28 2013 +0000
+
+    Merge r1523750 from trunk to branch-2 for YARN-1027. Implement RMHAProtocolService (Karthik Kambatla via bikas)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-2@1523753 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit fa9b717b7a1e658989fba39388b69727c24b3899)
+    
+    Conflicts:
+    	hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/ResourceManager.java
+    
+    (cherry picked from commit abe696a56abb41ff337442d36b658ea57c5520ff)
+
+commit bdb713231ddb5a8b60819b2524b4a430b61e547d
+Author: Bikas Saha <bikas@apache.org>
+Date:   Tue Sep 10 17:49:20 2013 +0000
+
+    Merge r1521560 from trunk to branch-2 for YARN-1098. Separate out RM services into Always On and Active (Karthik Kambatla via bikas)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-2@1521562 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 43835d366049aa73b225a122b0cb750be78951fd)
+    
+    Conflicts:
+    	hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/main/java/org/apache/hadoop/yarn/server/resourcemanager/ResourceManager.java
+    
+    (cherry picked from commit 3c69c8528965435bb917907b24df177ac1adec17)
+
+commit 7e581cecb036771db2bcbb8ee9e6fe8e5fef4007
+Author: Sanford Ryza <sandy@apache.org>
+Date:   Thu Oct 10 22:49:56 2013 +0000
+
+    YARN-1265. Fair Scheduler chokes on unhealthy node reconnect (Sandy Ryza)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/trunk@1531146 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 65df975875ad7a7cc9d1e462f5b4bc27363bac7c)
+
+commit e05f524e3f9103db7ffd77b3c67cf62300f7f15c
+Author: Sanford Ryza <sandy@apache.org>
+Date:   Mon Oct 14 08:51:34 2013 +0000
+
+    YARN-305. Fair scheduler logs too many "Node offered to app" messages. (Lohit Vijayarenu via Sandy Ryza)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/trunk@1531817 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 4acf4244602e26f0e68fac5794b705552ca84312)
+
+commit f0230c3d30ee2f0807b822330d19cdb8b1270167
+Author: Sandy Ryza <sandy@cloudera.com>
+Date:   Tue Oct 15 23:55:41 2013 -0700
+
+    MR1: CLOUDERA-BUILD. Update versions from 2.1.0 to 2.2.0
+
+commit bb11c3606e6ed230579dbb556774035f9809e624
+Author: Colin Patrick Mccabe <cmccabe@cloudera.com>
+Date:   Tue Oct 15 11:05:57 2013 -0700
+
+    MR1: CLOUDERA-BUILD. fix-git-line-ending-confusion-in-mapreduce1-project
+
+commit 2acd6549962a010dfcfd0f8fb9ca5b5cb84e8b53
+Author: Sanford Ryza <sandy@apache.org>
+Date:   Mon Oct 14 21:07:55 2013 +0000
+
+    YARN-1259. In Fair Scheduler web UI, queue num pending and num active apps switched. (Robert Kanter via Sandy Ryza)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-2@1532096 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 5f145ccad257acdc2f7b160be3b960eb04471e33)
+
+commit e7767e32df5d6ed6aa102e78f47c4d9af68031f7
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Fri Oct 11 16:35:57 2013 -0700
+
+    YARN-1274. Fixed NodeManager's LinuxContainerExecutor to create user, app-dir and log-dirs correctly even when there are no resources to localize for the container. Contributed by Siddharth Seth.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/trunk@1529555 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 473759719678b87b2a5ba54f05c0be5bb29baa66)
+    
+    Conflicts:
+    	hadoop-yarn-project/CHANGES.txt
+
+commit fdc02f5ea2ff8c79d12c8ed32816ee61100014b4
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Wed Oct 9 10:15:58 2013 -0700
+
+    YARN-1284. LCE: Race condition leaves dangling cgroups entries for killed containers. (Alejandro Abdelnur via Sandy Ryza)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-2.2@1530714 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 93bfa25d8b6bb57b4ec54a4ffcc5bd95b7bce137)
+    
+    Conflicts:
+    	hadoop-yarn-project/CHANGES.txt
+
+commit 46b7e727c292ce8956c5ec9a2463bf71da84de01
+Author: Sanford Ryza <sandy@apache.org>
+Date:   Wed Oct 9 09:19:14 2013 +0000
+
+    YARN-1258. Allow configuring the Fair Scheduler root queue (Sandy Ryza)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/trunk@1530542 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 038b46ddbf9d1295a35ffcef79dedaf8764350bd)
+
+commit 8b27a91f682c4c3426da68c7b3f6987b2ff397dd
+Author: Sanford Ryza <sandy@apache.org>
+Date:   Sat Oct 5 22:04:53 2013 +0000
+
+    YARN-1268. TestFairScheduer.testContinuousScheduling is flaky (Sandy Ryza)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/trunk@1529529 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit f8f2c6b8fddfed9e00df2a3b253399e0b3f9caa2)
+
+commit 29d270991cd8822253439200c9f2cc855d77268f
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Fri Oct 4 21:59:43 2013 +0000
+
+    YARN-1253. Changes to LinuxContainerExecutor to run containers as a single dedicated user in non-secure mode. (rvs via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/trunk@1529325 13f79535-47bb-0310-9956-ffa450edef68
+
+commit eaba370099a053353215d78e0faedc2e6d3d3cfd
+Author: Robert Kanter <rkanter@cloudera.com>
+Date:   Fri Oct 4 15:44:17 2013 -0700
+
+    MR1: CLOUDERA-BUILD. Updating TestDistCh to work with HDFS changes (CDH-14763)
+
+commit 0b4f134dbbe00439ea8644f144ddd669c77b875b
+Author: Robert Kanter <rkanter@cloudera.com>
+Date:   Thu Oct 3 18:24:29 2013 -0700
+
+    MR1: CLOUDERA-BUILD. Update TestDelegationTokenRenewal to use new location of FakeRenewer provider (CDH-14653)
+
+commit 451662f465792b3740ffa3bc6b6e210c0bf8f936
+Author: Robert Kanter <rkanter@cloudera.com>
+Date:   Thu Oct 3 15:33:20 2013 -0700
+
+    MR1: CLOUDERA-BUILD. Fixing TestStreamingStatus failure (CDH-14655)
+
+commit 4a2988999af86379b4cae97c94581788d85a26df
+Author: Sanford Ryza <sandy@apache.org>
+Date:   Thu Oct 3 01:17:48 2013 +0000
+
+    YARN-1213. Restore config to ban submitting to undeclared pools in the Fair Scheduler. (Sandy Ryza)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/trunk@1528696 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 0f91f2af2be1c925370528bfbd7baf2a52731e2a)
+    
+    Conflicts:
+    
+    	hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/fair/TestFairScheduler.java
+
+commit 7ddf6ec2cf7079ecf3dfeb3a54951d22f6077497
+Author: Arun Murthy <acmurthy@apache.org>
+Date:   Thu Sep 26 23:02:51 2013 +0000
+
+    MAPREDUCE-5514. Fix TestRMContainerAllocator. Contributed by Zhijie Shen.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/trunk@1526735 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 62efec4f026edbb403bce9948adb3855832e522f)
+
+commit 3394525cf6c3bdec3bd560b4a9b4fda7db7620e7
+Author: Robert Kanter <rkanter@cloudera.com>
+Date:   Wed Oct 2 13:50:12 2013 -0700
+
+    MR1: CLOUDERA-BUILD. Reverting: "Commenting out some failing MR1 tests for cdh5b1 (CDH-14666)"
+    
+    This reverts commit b36c566b24f6fcea46c43311276532f30b8ca5d1.
+
+commit ae57577c47bfb9e15f7acdf75bc18d3a04da6fff
+Author: Robert Kanter <rkanter@cloudera.com>
+Date:   Wed Oct 2 11:08:37 2013 -0700
+
+    MR1: CLOUDERA-BUILD. Add ability to exclude multiple MR1 tests from being executed (CDH-14677)
+
+commit c3a475bfd454f0166a28a7c5d1bd1df8279ef8f7
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Wed Oct 2 10:46:33 2013 -0700
+
+    CLOUDERA-BUILD. Update MR1 to ZK 3.4.5 dependency version
+    
+    This harmonizes the version number with Hadoop 2, which depends
+    on 3.4.5 due to recently-committed HADOOP-8315.
+
+commit e734011baf936f1476bf2902a8b1a9874cda7f1f
+Author: Robert Kanter <rkanter@cloudera.com>
+Date:   Tue Oct 1 22:25:52 2013 -0700
+
+    MR1: CLOUDERA-BUILD. Commenting out some failing MR1 tests for cdh5b1 (CDH-14666)
+
+commit b159d5e3a57c49ac5a7132c9486bb46a4ecac645
+Author: Sanford Ryza <sandy@apache.org>
+Date:   Tue Oct 1 19:54:50 2013 +0000
+
+    YARN-1010. FairScheduler: decouple container scheduling from nodemanager heartbeats. (Wei Yan via Sandy Ryza)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/trunk@1528192 13f79535-47bb-0310-9956-ffa450edef68
+    
+    Conflicts:
+    
+    	hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-resourcemanager/src/test/java/org/apache/hadoop/yarn/server/resourcemanager/scheduler/fair/TestFairScheduler.java
+
+commit 325d0435e7e221a04e98374680c32ae03160b98c
+Author: Chris Nauroth <cnauroth@apache.org>
+Date:   Fri Sep 27 22:56:54 2013 +0000
+
+    HDFS-5260. Merge zero-copy memory-mapped HDFS client reads to trunk and branch-2.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-2@1527115 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 0e3c81df59d89f6207361101c571dfb5e11f003e)
+
+commit fa21dc08936130a577e6b872223dfed1fe0fce8f
+Author: Sandy Ryza <sandy@cloudera.com>
+Date:   Mon Sep 30 10:30:03 2013 -0700
+
+    MR1: CLOUDERA-BUILD. After HDFS-4817, fix TaskTracker to use identifier argument in NativeIO.POSIX.posixFadviseIfPossible
+
+commit 481f610f91ec4e46003f3b717c25659b56260e9d
+Author: Hitesh Shah <hitesh@apache.org>
+Date:   Thu Sep 19 20:40:52 2013 +0000
+
+    Merge 1524829 from trunk to branch-2 for YARN-353. Add Zookeeper-based store implementation for RMStateStore. Contributed by Bikas Saha, Jian He and Karthik Kambatla.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-2@1524831 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit d7bac95155b4243bd2563d38a5384952f74f3836)
+
+commit 1e8380d48665a3f821e2ad7518e0d89f77955653
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Tue Aug 13 10:54:46 2013 -0700
+
+    MR1: MAPREDUCE-5198. Fix a race condition during TaskTracker re-init which was causing failures since task directories were being cleaned up in multiple threads. Contributed by Arpit Gupta
+    
+    Reason: Proactive bug fix
+    Ref: CDH-11905
+    (cherry picked from commit cb1430ebafbcd22cc88ab6ceaf8987a67f784b3f)
+
+commit 796eeb5c03ab4dcafa7f39558263a26e011f222c
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Mon Aug 12 23:04:53 2013 -0700
+
+    MR1: CLOUDERA-BUILD. CDH-11669. Change ZK FC port from 8019 (hdfs) to 8018
+    (cherry picked from commit 4fb5fa6f1a0e00ebe3c0afee704de2294c7a1ae7)
+
+commit 5b13d7c39a1927733060569f61464177f483de09
+Author: Suresh Srinivas <suresh@apache.org>
+Date:   Mon Jan 7 01:34:20 2013 +0000
+
+    MR1: MAPREDUCE-4914. TestMiniMRDFSSort fails with openJDK7. Contributed by Brandon Li.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1429638 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 06cd43306bbb7937a603ec2b73460cb08e431fb2)
+    (cherry picked from commit 49aabc4129a426f8884a1da5566a426a984648bb)
+
+commit 1ef5bc2909bd692f491b3d86c376064755cf1551
+Author: Sanford Ryza <sandy@apache.org>
+Date:   Wed Aug 7 19:59:05 2013 +0000
+
+    MR1: MAPREDUCE-5450. Unnecessary Configuration instantiation in IFileInputStream slows down merge. (Stanislav Barton and Ted Yu via Sandy Ryza)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1511461 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 53dcb4c56c7bedf382227be43fcbbb5be74bdb67)
+    
+    Conflicts:
+    
+    	src/mapred/org/apache/hadoop/mapred/IFile.java
+    	src/mapred/org/apache/hadoop/mapred/ReduceTask.java
+    (cherry picked from commit 2773f8a300d03bee696def154c2f9f04858e038e)
+
+commit 37486d0e502cac7292de75bb188375c1743e79c3
+Author: Sandy Ryza <sandy@cloudera.com>
+Date:   Mon Aug 5 22:47:40 2013 -0700
+
+    MR1: MAPREDUCE-5367. Local jobs all use same local working directory (Sandy Ryza)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1510613 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 31f3ce8926e4a89b53b5cc81f99ba14818d18bf4)
+
+commit 7f4b99326de16ebd0fbc1e2f0be756ac7189fb31
+Author: Sandy Ryza <sandy@cloudera.com>
+Date:   Tue Jul 30 15:28:22 2013 -0700
+
+    MR1: MAPREDUCE-4366. mapred metrics shows negative count of waiting maps and reduces. (sandyr via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1507569 13f79535-47bb-0310-9956-ffa450edef68
+    
+    Ref: CDH-11475
+    Author: Sandy Ryza
+    (cherry picked from commit 61824f6b3d178e16eb7823c09b4cc0efc8aa217c)
+
+commit ba0ee42b474db0ed1d8d3a09edccf12f07d0bf5a
+Author: Sandy Ryza <sandy@cloudera.com>
+Date:   Thu Jul 11 15:28:15 2013 -0700
+
+    MR1: MAPREDUCE-5351. Fixed a memory leak in JobTracker due to stable FS objects in FSCache. Contributed by Sandy Ryza.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1499904 13f79535-47bb-0310-9956-ffa450edef68
+    
+    Includes both original commits and addendum
+    
+    Ref: CDH-12811
+    Author: Sandy
+    Reason: Reported on userlist
+    (cherry picked from commit feafc6e0faf81c1dc3e39ac0377522e9736a25c8)
+
+commit 0084506923fda9d10d6541dba3f0c3c69e4b8ba0
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Tue Jul 23 17:07:57 2013 -0700
+
+    MR1: MAPREDUCE-4049. plugin for generic shuffle service. (avnerb via tucu)
+    
+      Reason: CDH-13249, backporting TT side of plugglable shuffle.
+    (cherry picked from commit fe6ce94d802b6e44befd04a690b29630aaea2ebb)
+
+commit a093a2ed495ba79300d9048d2ca41596c2acf285
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Tue Jul 16 17:52:56 2013 -0700
+
+    MR1: CLOUDERA-BUILD: Fix TestJobHistory calls to JobHistory.parseHistoryFromFS
+    
+    Reason: Build fix
+    (cherry picked from commit 0121ad24cb96d10000164a8b0ae88ee0ff293023)
+
+commit f303218a226ef6e1844fa0616b974339be2a7691
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Wed Jul 3 15:57:20 2013 -0700
+
+    MR1: MAPREDUCE-5364. Deadlock between RenewalTimerTask methods cancel() and run(). (kkambatl via tucu)
+    (cherry picked from commit 14d67b8de24078559e2a1d5444e23731a3a6829c)
+
+commit 16e772910de58f589f9815350eab50f1e72aac7e
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Tue Jul 2 22:35:05 2013 -0700
+
+    MR1: CLOUDERA-BUILD. Avoid port conflicts in JT HA tests. Changes missed earlier
+    (cherry picked from commit 8105fa54be0df560c86fb33282ad1f202ab11ca1)
+    (cherry picked from commit 6422e36d807a1a70117a9cb9e92c4c4902db8582)
+    (cherry picked from commit cca8fafb1ffe3ca2d9c9a14afbf3fcda6a0f055c)
+
+commit 2d6b6a68c6debab9cb56a243eb1b18509c63cf76
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Fri Jun 28 12:16:33 2013 -0700
+
+    MR1: MAPREDUCE-4246 Failure in deleting user directories in Secure hadoop (unclean backport)
+    (cherry picked from commit 39d0586fd5bf911275ef4e691bb1773fff68bfff)
+
+commit 8daddfb56eedc79868fed3aafba4f037889e930c
+Author: Jing Zhao <jing9@apache.org>
+Date:   Wed Sep 18 20:47:16 2013 +0000
+
+    HDFS-5122. Support failover and retry in WebHdfsFileSystem for NN HA. Contributed by Haohui Mai.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/trunk@1524562 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 17c615159cd088ba376b79f0963b108cb9301676)
+    
+    Conflicts:
+    	hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/web/WebHdfsFileSystem.java
+
+commit 5f1a30534a497d60e16f99a5c3f85c9970696cec
+Author: Robert Kanter <rkanter@cloudera.com>
+Date:   Mon Sep 23 16:29:15 2013 -0700
+
+    MR1: CLOUDERA-BUILD. Targeting Java 6 by default (CDH-14356)
+
+commit 976ab3725818e909be1dc21cf2447e99064adce6
+Author: Robert Kanter <rkanter@cloudera.com>
+Date:   Mon Sep 23 16:28:29 2013 -0700
+
+    CLOUDERA-BUILD. Targeting Java 6 by default (CDH-14356)
+
+commit 60180a8c89bd99873fdf98ca2c60e74c08c05062
+Author: Robert Kanter <rkanter@cloudera.com>
+Date:   Thu Sep 19 17:59:25 2013 -0700
+
+    MR1: CLOUDERA-BUILD. Targeting Java 7 by default (CDH-14356)
+
+commit af471628747c3892a2309701d392541cc13c146a
+Author: Robert Kanter <rkanter@cloudera.com>
+Date:   Thu Sep 19 17:55:34 2013 -0700
+
+    CLOUDERA-BUILD. Targeting Java 7 by default (CDH-14356)
+
+commit 54308fba5b51373dec226ab07db7d6e9d04c91e0
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Mon Aug 12 21:04:54 2013 -0700
+
+    MR1: CLOUDERA-BUILD. CDH-8579. Remove MRUnit from contrib
+    (cherry picked from commit 112ae971dfe30762c46820690a84a27ea00a13a8)
+
+commit 00a9683cc8ee7e7178b976c8c51e21e463ec407b
+Author: Sandy Ryza <sandy@cloudera.com>
+Date:   Tue Aug 13 17:06:31 2013 -0700
+
+    MR1: MAPREDUCE-5038. old API CombineFileInputFormat missing fixes that are in new API. (sandyr via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1458021 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit a2330b6007f3424845cf30e5da162bbbf7d4036c)
+
+commit c77432a4f6679e533281a4cd88444e7ab97723b1
+Author: Sanford Ryza <sandy@apache.org>
+Date:   Wed Sep 18 13:44:33 2013 +0000
+
+    MAPREDUCE-5487. In task processes, JobConf is unnecessarily loaded again in Limits (Sandy Ryza)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/trunk@1524408 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 1e2f71060254edc6266036c2e0154e89a223c9a1)
+
+commit 2a259fd06dff306ee52dc381270f00df2d641951
+Author: Colin McCabe <cmccabe@apache.org>
+Date:   Thu Aug 15 04:06:00 2013 +0000
+
+    HADOOP-9875.  TestDoAsEffectiveUser can fail on JDK 7.  (Aaron T. Myers via Colin Patrick McCabe)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-2@1514153 13f79535-47bb-0310-9956-ffa450edef68
+
+commit ebb24613f0293adee1e2e029af1c171040b929cf
+Author: Robert Kanter <rkanter@cloudera.com>
+Date:   Wed Sep 18 10:54:33 2013 -0700
+
+    MR1: CLOUDERA-BUILD. CDH-14148 (CDH being inconsistently compiled with 1.6 or 1.7 JDK target version)
+
+commit cee8b0735f049df0a1311db5d4dd5f9ad67ef24b
+Author: Sanford Ryza <sandy@apache.org>
+Date:   Thu Aug 29 23:45:16 2013 +0000
+
+    MAPREDUCE-5484. YarnChild unnecessarily loads job conf twice (Sandy Ryza)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/trunk@1518857 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit e56d967f0381ad11ff30511e222a414f0a523ab0)
+
+commit 418f4bd32aa014cef06f78535a9c55b9df1c2c46
+Author: Robert Kanter <rkanter@cloudera.com>
+Date:   Fri Sep 13 15:19:35 2013 -0700
+
+    CLOUDERA-BUILD. Use JDK7
+
+commit aa633e4b2cef0bd0469ea5943041a99b4ca6af35
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Wed Apr 17 15:27:34 2013 -0700
+
+    CLOUDERA-BUILD. Add changes to hadoop build to specify JDK1.7 as target
+    (cherry picked from commit 2564488ef8ac30c5edeb8706d0bd13ff145f6e33)
+
+commit 2253e35f61cac62334768c6bf53b78c3201b79d9
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Fri Mar 15 11:10:42 2013 -0700
+
+    CLOUDERA-BUILD. add safety check to Hadoop build build to ensure the right JDK is being used
+    (cherry picked from commit 3d9e98821e6bbc6e351b5e0997a3766fa4b8fb58)
+    
+    Conflicts:
+    	pom.xml
+
+commit 601aa8966d5f90e61dcd0cb0f4cc37174bcc809d
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Fri Sep 13 11:48:22 2013 -0700
+
+    MR1: CLOUDERA-BUILD. CDH MR1 equivalent of MAPREDUCE-5379
+    (cherry picked from commit 9f092c04cfc3290b31dab5126d93dd3255a3fbee)
+
+commit 5be55e896b4e1e287528c8a28a5485a405d4faf0
+Author: Robert Kanter <rkanter@cloudera.com>
+Date:   Wed Aug 28 10:17:13 2013 -0700
+
+    MR1: CLOUDERA-BUILD: Bug:4337918 (MAPREDUCE-2359)  default name node is viewfs:/// if we pass hdfs://path giving error - fix in DistributedCache(ramach)
+    
+    Author: Krishna Ramachandran <ramach@yahoo-inc.com>
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-0.20-security-patches@1077793 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry-picked from commit 1f775395ae5dd060de0303f221f15fd985f025da)
+    
+    Ref: CDH-13780
+
+commit f7c8681fd5c8ff05c470cb57a30388cb6db6a9dc
+Author: Robert Kanter <rkanter@cloudera.com>
+Date:   Wed Aug 28 10:12:09 2013 -0700
+
+    MR1: CLOUDERA-BUILD: Fix 4274823 Distributed Cache is not adding files to class paths
+    
+    Contributed by Chris Douglas
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-0.20-security-patches@1077790 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry-picked from commit fc0ec8c130da1ed2638728b0482b47f9250a156b)
+    
+    Ref: CDH-13780
+
+commit 55e50b6f5c1ab7274b08ffa5540e0f760e79bc05
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Mon Sep 9 17:22:48 2013 +0200
+
+    CLOUDERA-BUILD. Use slf4j version from CDH root
+
+commit ce45ef009f75ef3a95a3717e28e4d570633be645
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Tue Aug 27 17:23:59 2013 +0200
+
+    CLOUDERA-BUILD. Use cdh.protobuf.version variable to specify the version of protobuf/protoc to use
+
+commit cde0e85c2b678db777b6af6ca63aa271883cf46c
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Mon Aug 26 23:11:14 2013 +0200
+
+    CLOUDERA-BUILD. Change env variable for protoc to be CDH5 specific
+
+commit 383e709c47320d3308294f64822709732e071279
+Author: Sandy Ryza <sandy@cloudera.com>
+Date:   Wed Aug 21 20:54:45 2013 -0700
+
+    MR1: CLOUDERA-BUILD. Alter build.xml to place task controller binaries in folder that matches up with System.getProperty("os.name")
+    
+    Author: Sandy Ryza
+    Ref: CDH-13735
+
+commit c8e4429542d8f63f1afccee5a1dae26450e7a1b4
+Author: Sandy Ryza <sandy@cloudera.com>
+Date:   Mon Aug 12 10:49:48 2013 -0700
+
+    CLOUDERA-BUILD. Revert "svn merge -c 1507259 from trunk for HADOOP-9756. Remove the deprecated getServer(..) methods from RPC."
+    
+    This reverts commit a004a2812d9109d995d9a7870b772c24a21e69ba.
+    
+    Conflicts:
+    
+    	hadoop-common-project/hadoop-common/src/test/java/org/apache/hadoop/ipc/TestRPC.java
+    	hadoop-hdfs-project/hadoop-hdfs/src/main/java/org/apache/hadoop/hdfs/NameNodeProxies.java
+
+commit b5b2ce6e4284ab5fbd879043e2a23c0b8287244f
+Author: Sandy Ryza <sandy@cloudera.com>
+Date:   Wed Jul 17 16:02:31 2013 -0700
+
+    MR1: HADOOP-8329. Build fails with Java 7. Contributed by Eli Collins
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1340270 13f79535-47bb-0310-9956-ffa450edef68
+    
+    Author: Sandy Ryza
+    Ref: CDH-13087
+
+commit 16a1d8a7c0ee5632a27c306f77abef964bbb3961
+Author: Andrew Bayer <andrew@cloudera.com>
+Date:   Tue Jul 9 12:27:29 2013 -0700
+
+    CLOUDERA-BUILD. Use JDK7.
+
+commit fde1f39b31b3dd85581cfc115db1555e798fb816
+Author: Sandy Ryza <sandy@cloudera.com>
+Date:   Fri Jun 21 16:35:24 2013 -0700
+
+    CLOUDERA-BUILD. Set the Fair Scheduler as the default scheduler.
+
+commit 6e3218374fbe7c15a0c8b7b195a13fd48fdf0ec9
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Fri Jun 14 15:20:23 2013 -0700
+
+    MR1: CLOUDERA-BUILD. Delete tests from TestIO that test/require old record generation
+
+commit 8f882001eaa3b901c2eda48d6e95c63c1576c2c2
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Thu Jun 13 19:41:23 2013 -0700
+
+    CLOUDERA-BUILD. Revert "CLOUDERA-BUILD. Revert "HADOOP-8912. Merging changes 1397437 and 1397438 from trunk""
+    		IOW. Reapply HADOOP-8912
+    
+    This reverts commit 0f1a867b5d7b122f90698f341aec44f46d592e81.
+    (cherry picked from commit 680a6f4fc34ff7d3fba9ad05e5beb025493d5563)
+
+commit bc335ce06458fe7673b88ef14e100f76dc2a9448
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Thu Jun 13 14:10:35 2013 -0700
+
+    MR1: CLOUDERA-BUILD. Fix issues due to Common incompatibilities in CDH5
+    (cherry picked from commit 265e97bc866bae5ca7df66635783b6eb5a36dee0)
+
+commit ff057eb966943a2a71951abd6489d771e3a31a17
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Thu Jun 13 11:40:07 2013 -0700
+
+    MR1: CLOUDERA-BUILD. CDH-9432. HADOOP-8700 breaks MR1
+    (cherry picked from commit 768379937cfcd9d15d2f1d2567e7b35696401ee3)
+
+commit a5d6c634484a9c9d16406715824fca9544fa6fb1
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Wed Jun 12 15:47:29 2013 -0700
+
+    MR1: CLOUDERA-BUILD. Build changes for CDH5.0.0 development
+    (cherry picked from commit b1f1bcd8c51c5fbe7f59f5a0291a651bcb0b7297)
+
+commit 0458cad75060bcb6bf2ea1627577739f6b8cdbd0
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Mon Jun 3 12:57:59 2013 -0700
+
+    MR1: MAPREDUCE-5250 Searching for ';' in JobTracker History throws ArrayOutOfBoundException. (kkambatl via tucu)
+    
+    Reason: CDH-12176 (Customer request)
+    (cherry picked from commit 4ad5b8337426ecb7046926f82aac2030f4a4fc85)
+
+commit 6d16b68090f4288549e5347cd7359246730effe5
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Thu May 30 11:43:58 2013 -0700
+
+    MR1: CLOUDERA-BUILD. Job History search for non-existent dates results in error
+    
+    Reason: Customer request/ Bug fix
+    (cherry picked from commit 1c1b318a626bed66f610c9db4882d377dc3aa9ca)
+
+commit 159f5c93f98ce3d16c989d273c06aa24fd6d8c65
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Mon May 20 11:37:58 2013 -0700
+
+    MR1: MAPREDUCE-5148. Fix MAPREDUCE-4970 to ensure task-log4j.properties is available for previous installs by putting it in hadoop-core.jar. Contributed by Arun C. Murthy.
+    (cherry picked from commit 28105b96b5c4bba5aead1aee53e8130b0198db5d)
+
+commit e28c414ccf831f0ee44ac9b6d48c4996bdbe22e8
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Wed May 15 01:35:06 2013 -0700
+
+    MR1: CLOUDERA-BUILD. Backport fixes from MAPREDUCE-323 to allow underscores in usernames and jobnames
+    
+    Reason: Customer request
+    Ref: CDH-11431
+    Author: Karthik Kambatla
+    (cherry picked from commit 0fafe1043fd60266b1966fd7f6457465cadb02c9)
+
+commit 72249c5e8b53ec65cf601ea96331063f3a14e2c6
+Author: Thomas Graves <tgraves@apache.org>
+Date:   Tue Sep 11 14:34:27 2012 +0000
+
+    MR1: MAPREDUCE-4576. Large dist cache can block tasktracker heartbeat (Robert Evans via tgraves).
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1383430 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 5cd92fe94be2ff5657903dd87f657aff6d2c8269)
+    (cherry picked from commit fd454fe5b6f4b84f1a926fba8010aaf7de1ce5c1)
+    (cherry picked from commit ae4c033d88b32822b788c1b1e296e9ecb2da6e69)
+    (cherry picked from commit a02f2c04fcd1788094654317e8ff5ea3c7e43c60)
+    (cherry picked from commit 5b44a623f0a4476be71288c040cb0f9b4c27393d)
+
+commit 3145306b290075f4c4d087f288d75a2d591d850e
+Author: Matthew J. Foley <mattf@apache.org>
+Date:   Sun Feb 19 23:41:18 2012 +0000
+
+    MR1: MAPREDUCE-3824. Distributed caches are not removed properly. Contributed by Thomas Graves.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1291093 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 7673e6d191a6cf1bbd12a4402c28333cce602243)
+    
+    Conflicts:
+    	src/test/org/apache/hadoop/filecache/TestTrackerDistributedCacheManager.java
+    (cherry picked from commit d2cd046c85766f9ef3ad3488bdffcfce056068ee)
+    (cherry picked from commit b23d60d08e0d34c984d4fb224921061c4b1d95d0)
+    (cherry picked from commit 2724f3b40b58758fe6b6795120a13a19f37b96b7)
+    (cherry picked from commit 77367205d49cd0d0816c0ff10dd7317eb0d64aef)
+
+commit d10cf61ae8a48c459a0708849d494a55ccbaeacf
+Author: Mahadev Konar <mahadev@apache.org>
+Date:   Mon Aug 1 21:41:20 2011 +0000
+
+    MR1: MAPREDUCE-2494. Make the distributed cache delete entires using LRU priority. (Robert Joseph Evans via mahadev)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-0.20-security@1152941 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 68e0fb175a284b2836f7c6e02c049d124be1f03e)
+    (cherry picked from commit ce8bdab53634761243c70c9b71ebd0354c64a638)
+    (cherry picked from commit d25385cb3ba35104f08a6247b91c24a1259c6339)
+    (cherry picked from commit 32cb4a2eba1a310989dd1d78b6fd20a5f935c141)
+    (cherry picked from commit 391cee06d199146c91e1a2024ddc0d6b6b7ff735)
+
+commit 7e9037d54380b1607d009450f93fd952ef0eab93
+Author: Christopher Douglas <cdouglas@apache.org>
+Date:   Wed May 25 02:23:20 2011 +0000
+
+    MR1: MAPREDUCE-2495. exit() the TaskTracker when the distributed cache cleanup
+    thread dies. Contributed by Robert Joseph Evans
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-0.20-security@1127362 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit fcc321599e9e068387d3401edd171c950b7be018)
+    (cherry picked from commit 8ec131a3b8ed4d7e5593f75e61170c1436f9ba47)
+    (cherry picked from commit 064e362c83a0a5b462d0f20b2904f36c3db032c1)
+    (cherry picked from commit cdd203fc692aa430d76dec4a02144bee5b382d79)
+    (cherry picked from commit 48d1a305a0b3da0356c2e22b090ceb1a6cb0eb25)
+
+commit 5f66c9462e3b9b991b6ef449109568b2fde3a5df
+Author: Christopher Douglas <cdouglas@apache.org>
+Date:   Mon May 16 22:53:09 2011 +0000
+
+    MR1: MAPREDUCE-2479. Move distributed cache cleanup to a background task,
+    backporting MAPREDUCE-1568. Contributed by Robert Joseph Evans
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-0.20-security@1103940 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 9b31f27ce02840e94043df911c82cf326afd1604)
+    
+    Conflicts:
+    	src/mapred/org/apache/hadoop/filecache/TrackerDistributedCacheManager.java
+    	src/mapred/org/apache/hadoop/mapred/TaskTracker.java
+    	src/test/org/apache/hadoop/filecache/TestTrackerDistributedCacheManager.java
+    (cherry picked from commit 9e9fa3ab08ff715e63f5f76291f0d5c1ee50e129)
+    (cherry picked from commit fa822e604cc6ed2dd3cd833984dbe177463d622c)
+    
+    Conflicts:
+    	src/mapred/org/apache/hadoop/mapred/TaskTracker.java
+    (cherry picked from commit 09ad69c481052f0d942f3b991ff65876ba001587)
+    (cherry picked from commit 15c8c2602c940fefc01f668e67a4a9c4fa1d5681)
+
+commit 8f28f9a41029820f85fe3bd03f39f4eedb8f1e96
+Author: Christopher Douglas <cdouglas@apache.org>
+Date:   Thu Mar 31 08:12:48 2011 +0000
+
+    MR1: MAPREDUCE-2409. Distinguish distributed cache artifacts localized as
+    files, archives. Contributed by Siddharth Seth
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-0.20-security@1087209 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 093cf31c10a2d05fd82ec9406ccb8e4b20a582e0)
+    (cherry picked from commit c2a4f8836d88554f4e91a3e4901a40d743eae8b6)
+    
+    Conflicts:
+    	src/test/org/apache/hadoop/filecache/TestTrackerDistributedCacheManager.java
+    (cherry picked from commit f056597ebd04d267098f406990dd051b07ebb9ca)
+    (cherry picked from commit ad21ca0b4648324b0bb517553d595765f7eb7d1b)
+    (cherry picked from commit 15d6975e671056aa295ccf8d5fe65e875054e0d5)
+
+commit 2fc0132dc2f5b32386ccbdbaff1bbfa5e50d1adf
+Author: Sandy Ryza <sandy@cloudera.com>
+Date:   Mon Apr 22 16:38:46 2013 -0700
+
+    MR1: CLOUDERA_BUILD. MR TokenCache shouldn't fail if JT principal is missing
+    
+    Ref: CDH-11145
+    Author: Sandy Ryza
+    Reason: Customer issue
+    (cherry picked from commit 28ecf38392aac087499fcfec4afe3c24e702f1ba)
+
+commit bcc50c4fb7a808e19280a05f57c1cbefdf0d501d
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Fri May 10 19:09:51 2013 -0700
+
+    MR1: CLOUDERA-BUILD. CDH-10752. Remove aspectj dependency in MR1
+    (cherry picked from commit edecc71e3d1edf9380f949647c35f3cf8436bd16)
+
+commit edeb9579c099307c7c44145b99b052027b25fa25
+Author: Tom White <tom@cloudera.com>
+Date:   Mon May 13 12:40:39 2013 +0100
+
+    MR1: CLOUDERA-BUILD. Unable to refresh JT when HA is enabled.
+    (cherry picked from commit e3049f11a6e05c588909947fbbdee1cae57ad79c)
+
+commit c07f96a640ae2e3d3f3d0fec0e2fc780e419a4f3
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Thu May 9 21:22:50 2013 +0000
+
+    MR1: MAPREDUCE-5218. Annotate (comment) internal classes as Private. (kkambatl via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1480779 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 2b331d8e2242e862fec2017f073d7e9db521e592)
+    
+    Conflicts:
+    	src/mapred/org/apache/hadoop/mapred/MapReducePolicyProvider.java
+    	src/mapred/org/apache/hadoop/mapred/TaskInProgress.java
+    
+    Reason: API Compatibility
+    Ref: CDH-9121/9128/9129/9130
+    (cherry picked from commit 6d132a80a4dfb843cfc46fef1babfef389b2ccaf)
+
+commit 555203cf5663d20737d69dd7382fed83825de047
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Thu May 9 15:38:10 2013 -0700
+
+    MR1: CLOUDERA-BUILD. CDH-9235. Fix API incompatibility in mapreduce.lib.jobcontrol.JobControl
+    (cherry picked from commit 5ab1a1731b97dcdc4877960cb955ae74a9bbaa24)
+
+commit 56918c5dcf9f5725b1f2141b6218547bbe9aebab
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Thu May 9 15:23:59 2013 -0700
+
+    MR1: CLOUDERA-BUILD. CDH-9234. Fix API incompatibility in mapredue.lib.jobcontrol.ControlledJob
+    (cherry picked from commit 53024f9fd2a32e2fabc6f8b499bb6fda5c3c01c6)
+
+commit a1250d586877e9dd7bc89fc1f37c4076045729da
+Author: Andrew Wang <andrew.wang@cloudera.com>
+Date:   Thu May 2 14:33:59 2013 -0700
+
+    MR1: MAPREDUCE-5193. A few MR tests use block sizes which are smaller than the default minimum block size. Contributed by Andrew Wang.
+    
+    Reason: Broken test
+    Author: Andrew Wang
+    Ref: CDH-11911
+    (cherry picked from commit 9d53c3d05e153ba4be63f55e0aaf9d8a74559acf)
+
+commit eedf28e86e17f68ea39470ad4f25df201e2171be
+Author: Roman Shaposhnik <rvs@cloudera.com>
+Date:   Wed May 1 19:26:14 2013 -0700
+
+    MR1: KITCHEN-BUILD. Grafting MR1 code base on top of Hadoop 2.X
+    (cherry picked from commit 4a161db6f714c4e6e28c1efdf62a94938e3f8691)
+
+commit 494fa13ba8f6e310bcb5c3d313110d8cb5eb3b01
+Author: Arun Murthy <acmurthy@apache.org>
+Date:   Wed May 1 02:54:14 2013 +0000
+
+    MR1: MAPREDUCE-5154. Ensure job delegation token renewal is cancelled after job staging directory is deleted. Contributed by Sandy Ryza & Arun C. Murthy.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1477900 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 88731da5e0f55b72bc5238915899de89632d663e)
+    
+    Ref: CDH-11257
+    Author: Sandy Ryza
+    Reason: Customer request
+    (cherry picked from commit d77b44b0513d7396dc2af58341ae8de313bc2f6e)
+
+commit a78412780db3c53e4024911127cdae74a44d7553
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Wed Apr 17 23:18:24 2013 +0000
+
+    MR1: MAPREDUCE-5133. TestSubmitJob.testSecureJobExecution is flaky due to job dir deletion race. (sandyr via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1469098 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit d47454bf29ab2c89d2bbb0d87afead8abfd03687)
+    
+    Reason: Flaky test
+    Author: Sandy Ryza
+    Ref: CDH-11169
+    (cherry picked from commit af716c750fdc0b4df33550ec7f29acee9b442d3e)
+
+commit 08c9f4b4ff45c455a804a7e5dc5756f590ba8287
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Wed Apr 17 15:27:59 2013 -0700
+
+    MR1: CLOUDERA-BUILD. Add changes to mr1 build to specify JDK1.7 as target
+    (cherry picked from commit 098bc163405dfb3e5e61d4cf8e80fdfb47e21d24)
+
+commit 9619f844aa24524dbae16daac0f8cfbbd7c71b1f
+Author: Harsh J <harsh@cloudera.com>
+Date:   Tue Mar 26 07:52:08 2013 +0530
+
+    MR1: CLOUDERA_BUILD. Fix regression introduced by b5eaf8099 that makes a certain JobTracker limit configurable by clients if un-finalized.
+    
+    Description: The JT's split meta info limits were being taken from client configs due to an earlier regression change. This fixes the bad behavior.
+    Reason: Customer Request
+    Author: Harsh J
+    Ref: CDH-10222
+    (cherry picked from commit 3d66cbd755b0ad77f35f2bc45f236b25f7854f25)
+
+commit 698a07c9359242bbf3f4cd230352753d7a3a8f5b
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Wed Apr 3 22:29:22 2013 +0000
+
+    MR1: MAPREDUCE-2817. MiniRMCluster hardcodes 'mapred.local.dir' configuration to 'build/test/mapred/local'. (rkanter via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1464221 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 3f8b27564ad759c9d88a09cd69e5ca26f8f5221b)
+    (cherry picked from commit d83970b145ffa849515fe0536af83c4677ae9923)
+
+commit de69040b80babf490a7a466af426053e64282dd3
+Author: Thomas White <tomwhite@apache.org>
+Date:   Wed Feb 27 10:42:58 2013 +0000
+
+    MR1: MAPREDUCE-5008. Merger progress miscounts with respect to EOF_MARKER. Contributed by Sandy Ryza.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1450725 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit f15a72d7d2d14e8d715e4404f2eb55e5e78e67e9)
+    
+    Conflicts:
+    
+    	src/mapred/org/apache/hadoop/mapred/ReduceTask.java
+    
+    Author: Sandy Ryza
+    Reason: Fix progress after MAPREDUCE-2264
+    Ref: CDH-11368
+    (cherry picked from commit 2c0428f73eddda137e8aa6ef4cb0112b64f0e2d3)
+
+commit cb38b6d4e287199eaff99bd856ab42e1a89114c9
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Mon Mar 18 15:43:46 2013 -0700
+
+    MR1: MAPREDUCE-5028. The previous commit is a partial cherry-pick. This is to fix it.
+    
+    Ref: CDH-10562
+    Author: Karthik Kambatla
+    (cherry picked from commit c05d7c700b9458bb54029e592bca0bbd36f4c7bc)
+
+commit de671e809506b3ef68f25a45a7d8648bba6c3dc7
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Fri Mar 15 20:12:29 2013 +0000
+
+    MR1: MAPREDUCE-5073. TestJobStatusPersistency.testPersistency fails on JDK7. (sandyr via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1457093 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit d5ba7c6a40b66f4cbd51445cc89e0fc79d16cf01)
+    
+    Author: Sandy Ryza
+    Reason: Fix failing jdk7 tests
+    Ref: CDH-10973
+    (cherry picked from commit 1a83cd0f80cf2f4e3a552f66088d9def9245d102)
+
+commit a6c6a9e6c4689079dadcc3c7784a215208a2d065
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Fri Mar 15 17:48:32 2013 +0000
+
+    MR1: MAPREDUCE-5072. TestDelegationTokenRenewal.testDTRenewal fails in MR1 on jdk7. (sandyr via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1457034 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit d473428164658260bdc691f047c7411d98a946c2)
+    
+    Reason: Fix failing jdk7 tests
+    Ref: CDH-11028
+    Author: Sandy Ryza
+    (cherry picked from commit 2cb57a911f67c8c6574789b546194831554830a3)
+
+commit bf416610ceaf444c3defb7edcc717a5df0f5deda
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Fri Mar 15 17:42:02 2013 +0000
+
+    MR1: MAPREDUCE-5070. TestClusterStatus.testClusterMetrics fails on JDK7. (tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1457033 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit d06219b66948d0b3dfe4dedd78a871fe0a458c14)
+    
+    Author: Sandy Ryza
+    Ref: CDH-10971
+    Reason: Fix failing jdk7 tests
+    (cherry picked from commit ba765d68aba424946292693fce2466a56ebb7041)
+
+commit 702dd5ddbcb883dd604a1bc217f166023ead5ed4
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Fri Mar 15 11:16:19 2013 -0700
+
+    MR1: CLOUDERA-BUILD. add safety check to Hadoop build build to ensure the right JDK is being used
+    (cherry picked from commit 5b7c295850c34e9ebfb9ec22978d1c31e65719c7)
+
+commit 697de1d9e057ba80a37e9d845679f94146a1f587
+Author: Sandy Ryza <sandy@cloudera.com>
+Date:   Thu Mar 14 13:15:03 2013 -0700
+
+    MR1: MAPREDUCE-4777. In TestIFile, testIFileReaderWithCodec relies on testIFileWriterWithCodec. Contributed by Sandy Ryza
+    
+    Reason: Fix tests broken by move to JDK7
+    Ref: CDH-10994
+    Author: Sandy Ryza
+    (cherry picked from commit 01c942744635484d91ed70a1cb23f492ebf30f2b)
+
+commit 83dfe7db1ced90a6f08d76f68ce501c3b5fb2219
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Tue Mar 12 07:14:48 2013 -0700
+
+    MR1: Remove stripping of scheme, authority from submit dir in support of viewfs.
+    
+      Reason: bug
+      Author: Alejandro Abdelnur
+      Ref: CDH-10922
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-0.20-security-patches@1077795 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 6dc476279ad119495993caad3b0648f1b20287f0)
+    (cherry picked from commit 6ac85e8e78e60cb723d84beba4391bb05de91e18)
+
+commit 883b499a0b5e7b57cf04dfbb5016999d0b931547
+Author: Arun Murthy <acmurthy@apache.org>
+Date:   Mon Aug 1 21:49:39 2011 +0000
+
+    MR1: MAPREDUCE-2187. Reporter sends progress during sort/merge. Contributed by Anupam Seth.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-0.20-security@1152944 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit a453ed137110e1076d5c8e68736c690d37cf9175)
+    
+    Conflicts:
+    	src/mapred/org/apache/hadoop/mapred/ReduceTask.java
+    
+    Reason: Bug fix
+    Ref: CDH-10929
+    Author: Anupam Seth
+    (cherry picked from commit 403d160b3e3b530c6300c5cbb5726b4b040f1d6a)
+
+commit b8bc73e0b3231b0859cac839ec0ac57b842923fd
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Mon Mar 11 18:57:46 2013 +0000
+
+    MR1: MAPREDUCE-5047. keep.failed.task.files=true causes job failure on secure clusters. (sandyr via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1455283 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit b7824899b559389d140415f76a7a830e1a641de7)
+    
+    Reason: Customer issue
+    Ref: CDH-4759
+    Author: Sandy Ryza
+    (cherry picked from commit 47e56d65f37e252ea75ec1e176431c0e4998c73c)
+
+commit ceeed920346dedefeacdc24633a31dcd5f29674d
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Wed Mar 6 00:50:32 2013 +0000
+
+    MR1: MAPREDUCE-5028. Maps fail when io.sort.mb is set to high value. (kkambatl via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1453107 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 2ce6dc93376cb7bd54d7adafb49127151bcb686f)
+    
+    Conflicts:
+    	src/mapred/org/apache/hadoop/mapreduce/ReduceContext.java
+    
+    Reason: Integer overflow in combiner
+    Ref: CDH-10562
+    Author: Karthik Kambatla
+    (cherry picked from commit 28307ff1aaae1d595a78f12eb69a8779207148e9)
+
+commit ec5bcaa3db52ce22225276665bb68a9563a997c2
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Mon Mar 4 18:55:17 2013 -0800
+
+    MR1: CLOUDERA-BUILD. JobConf link in JobHistory is broken
+    
+    Reason: JobHistory is broken
+    Ref: CDH-10282
+    Author: Karthik Kambatla
+    (cherry picked from commit 99b584fa4394962c07295b44a3126a9f3be7dc18)
+
+commit b5407ce8a40bff1e5880d5683e223cf532eaef44
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Mon Feb 4 22:26:34 2013 +0000
+
+    MR1: MAPREDUCE-4843. When using DefaultTaskController, JobLocalizer not thread safe. (kkambatl via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1442404 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit aa82ee9b532d08199d259a53890f7e15519dd43c)
+    
+    Ref: CDH-9698
+    Author: Karthik Kambatla
+    (cherry picked from commit 54375d33cd6b75f9f13b16b5264518d879708db9)
+
+commit 108e9a41f5a93e88141083ba5e8acfbad20ef49f
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Wed Feb 6 01:48:16 2013 +0000
+
+    MR1: MAPREDUCE-4970. Child tasks (try to) create security audit log files. (sandyr via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1442831 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 11daa863b777104cbad7fa255268be336bf40541)
+    
+    Author: Sandy Ryza
+    Ref: CDH-10388
+    Reason: Customer
+    (cherry picked from commit 290024df2a638969084625473d9bbbd6f0455947)
+
+commit 0c4ae5cd1d987a19eec3716206707892ef68ba2e
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Thu Feb 14 21:55:15 2013 +0000
+
+    MR1: MAPREDUCE-4643. Addendum, make job-history cleanup-period configurable. (sandyr via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1446352 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit cbd3b7a35c16bb382db054999497574b8c29f626)
+    (cherry picked from commit 15c9e05cd5e997507b497de2399cc36b77e7f151)
+
+commit bc8da20685c6d0bb8203ce064a29f3f784cde80a
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Fri Feb 8 22:42:47 2013 +0000
+
+    MR1: MAPREDUCE-4643. Make job-history cleanup-period configurable. (sandyr via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1444266 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit e83648b4dd854844e655fc7e50f3e9b3305d73ba)
+    
+    Author: Sandy Ryza
+    Ref: CDH-10281
+    Reason: Customer
+    (cherry picked from commit 27f39d4beae125e8dca16d94a21c53eb650bd13e)
+
+commit 8fbb01ee16041c11bc117f8ca678fbc96270cccf
+Author: Tom White <tom@cloudera.com>
+Date:   Thu Feb 14 11:12:37 2013 +0000
+
+    MR1: CLOUDERA-BUILD. JT HA: job is not recovered when jt transitions to active then to standby and then to active (follow up)
+    
+    Reason: Bug
+    Ref: CDH-10365
+    Author: Tom White
+    (cherry picked from commit 223ecad2d71ac6ebe38b311bb3cd62cb291874b1)
+
+commit d63bfa44f4f257b62684309eb3885d7a28700449
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Tue Feb 12 16:14:27 2013 -0800
+
+    MR1: CLOUDERA-BUILD. hadoop client must exclude servlet/jsp/jetty/tomcat JARs.
+    
+      Reason: bug, this creates conflicts in Oozie and HttpFS
+      Author: Alejandro Abdelnur
+      Ref: CDH-10421
+    (cherry picked from commit b1e1f10e831672b16e08f7c7b5659c352613f4e0)
+
+commit c7efab8580e336282d934e5e86f5cf02f04e5275
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Mon Feb 11 10:40:22 2013 -0800
+
+    MR1: CLOUDERA-BUILD. JT HA:  job is not recovered when jt transitions to active then to standby and then to active
+    
+      Reason: bug
+      Author: Tom White
+      Ref: CDH-10365
+    (cherry picked from commit 78ceddb42ffbf61ea4bea63130a534d4a28fd741)
+
+commit 606d9a1c06ab5e7ed43c64318524828d3772455b
+Author: Christopher Douglas <cdouglas@apache.org>
+Date:   Thu Jul 19 19:06:21 2012 +0000
+
+    MR1: CDH-8864. Support for splittable and concatenated BZip2 - backport HADOOP-7823 and MAPREDUCE-4888
+    	  HADOOP-7823. Port HADOOP-4012 providing split support for bzip2 compressed files to branch-1. Contributed by Andrew Purtell
+    	  MAPREDUCE-4888. Fixed NLineInputFormat one-off error which dropped data. Contributed by Vinod K V.
+    
+    Reason: Support splittable/concatenated bzip2 (customers' request)
+    Ref: CDH-8864
+    Author: Andrew Purtell / Abdul Qadeer / Vinod K V
+    (cherry picked from commit 4ce73c91db2c4e9e3a167e03b138a9f927d26132)
+
+commit a264fbb6b79663503262bec3ec36420144b7d3da
+Author: Tom White <tom@cloudera.com>
+Date:   Fri Feb 1 14:14:13 2013 +0000
+
+    MR1: CLOUDERA-BUILD. JT HA: if job is run with mapred.job.restart.recover=false, job client hangs on failover
+    
+    Reason: Bug
+    Ref: CDH-10247
+    Author: Tom White
+    (cherry picked from commit 229250d70250380f44d9df5a0188c04333a9f084)
+
+commit f0022ae3ecff731085a8fa22792304109a9288b8
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Wed Feb 6 12:34:43 2013 -0800
+
+    MR1: MAPREDUCE-4977. Documentation for pluggable sort
+    
+      Reason: backport, new feature
+      Author: Alejandro Abdelnur
+      Ref: CDH-8388
+    (cherry picked from commit 44e35756091f500d1326ad846cbfc583c75a511e)
+
+commit 7b95e314d03cdc57170233fbb24b19b258102519
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Mon Jul 16 17:30:50 2012 +0000
+
+    MR1: HADOOP-8552. Conflict: Same security.log.file for multiple users. (kkambatl via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1362154 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit c1f59496ccba92261d85cc274450e5c759f0129d)
+    
+    Reason: log4j error printed out in task process
+    Ref:
+    Author: Sandy Ryza
+    (cherry picked from commit ce99fcf8441a97ef58555ead837498eeca4aaff3)
+
+commit cfec37ad0628ac61785a3fe5b4b5da7bd173f42d
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Wed Jan 30 23:55:46 2013 -0800
+
+    MR1: Revert "CLOUDERA-BUILD. Fix DataChecksum API usage to reflect HADOOP-8700 changes"
+    
+    This reverts commit be0ed1e32fe18f2b1ab327414fbbc8789bb1e0ce.
+    (cherry picked from commit 4185406af5ce31c62d9fac0a352e3bc82e324b91)
+
+commit 8efb57b33b7130bbe611dd31a899e96d82f3e9d6
+Author: Jenkins slave <kitchen-build@cloudera.com>
+Date:   Wed Jan 30 10:29:08 2013 -0800
+
+    MR1: Preparing for CDH4.3.0 development
+    (cherry picked from commit e13ca434a83095632e868c8a3a6f935c27b3dffb)
+
+commit 05181c5a8c489e5439b2cc96e17942056f7e7194
+Author: Tom White <tom@cloudera.com>
+Date:   Wed Jan 30 15:15:51 2013 +0000
+
+    MR1: CLOUDERA-BUILD. Wait for RUNNING state when transitioning to active in JT HA.
+    
+    Reason: Bug
+    Ref: CDH-10167
+    Author: Tom White
+    (cherry picked from commit 705530756051440c4a813f9d7ab5eeb550f8d2eb)
+
+commit 12a6e04afcfa46400d6b11b51efa00c87736afe5
+Author: Tom White <tom@cloudera.com>
+Date:   Tue Jan 29 12:01:51 2013 +0000
+
+    MR1: CLOUDERA-BUILD. Fair scheduler does not terminate its EagerTaskInitializationListener.
+    
+    Reason: Bug
+    Ref: CDH-10167
+    Author: Tom White
+    (cherry picked from commit 33ea303ca417b73d0404fa683760aa695284f41e)
+
+commit 945bb0a03306251e28ce6a6c78e3057140e2c0f4
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Mon Jan 28 16:16:03 2013 -0800
+
+    MR1: CLOUDERA-BUILD. JT HA: jobtrackerha daemon shuts down on secure cluster after a while
+    
+      Reason: bug
+      Author: Alejandro Abdelnur
+      Ref: CDH-10165
+    (cherry picked from commit 636167c90fa04ead9c9249819adfd969f7511e7a)
+
+commit 0a985b96500be5b2dca324cfb938fe4805b5507f
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Mon Jan 28 09:58:58 2013 -0800
+
+    MR1: CLOUDERA-BUILD. ReduceTask class requires public visibility for pluggable sort.
+    
+      Reason: bug
+      Author: Alejandro Abdelnur
+      Ref: CDH-10154
+    (cherry picked from commit cd09304604d3ebaa850b8e78b3c8d186fe6e25e3)
+
+commit 2b1abf1122d6c30958a93baeafe71efbad338fa6
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Sat Jan 26 20:33:41 2013 +0000
+
+    MR1: MAPREDUCE-4962. jobdetails.jsp uses display name instead of real name to get counters. (sandyr via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1438956 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 71a4429f006b489cda51862274751f446af7fbb6)
+    
+    Reason: Bug
+    Ref: CDH-9004
+    Author: Sandy Ryza
+    (cherry picked from commit bd99949a4a54a502b209ed005b55561a86d04fd2)
+
+commit 05269205e144e9e8133709a1d64caa88cdda3254
+Author: Thomas White <tomwhite@apache.org>
+Date:   Fri Jan 25 10:57:52 2013 +0000
+
+    MR1: MAPREDUCE-2931. LocalJobRunner should support parallel mapper execution. Contributed by Sandy Ryza.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1438447 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 14369a4ed7138a5eae46e95c5fe6d3ed61c72e34)
+    
+    Reason: New Feature
+    Ref: CDH-8337
+    Author: Sandy Ryza
+    (cherry picked from commit 8722d3e2dea4e93cd8994358832aa903bb2e4b2e)
+
+commit fa162085447282a79bf8d14e39f3a33da98c89da
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Sat Jan 26 04:29:54 2013 +0000
+
+    MR1: MAPREDUCE-4963. StatisticsCollector improperly keeps track of Last Day and Last Hour statistics for new TaskTrackers. (rkanter via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1438843 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit dd62cd17b0f975d22504162316072180fa03b141)
+    (cherry picked from commit 48b1877f75201a770e6ba0d6e9a1c226668442a5)
+
+commit a9910178b50f62a0e5459fed9544245a7b6738a7
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Fri Jan 25 01:05:12 2013 +0000
+
+    MR1: MAPREDUCE-2264. Job status exceeds 100% in some cases. (devaraj.k and sandyr via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1438286 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 142e1b8b722c53be5264310f64c81e8afcda5457)
+    
+    Reason: Customer/support request
+    Ref: CDH-7179
+    Author: Sandy Ryza
+    (cherry picked from commit 5cce98177a36ceb2f3030fc524d1d1f09b802645)
+
+commit c20685c1e64e17852775033665c16173dd6e4586
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Fri Jan 25 16:33:35 2013 -0800
+
+    MR1: CLOUDERA-BUILD. JT HA mrhaadmin does not work when hadoop.security.authorization is set to true
+    
+      Reason: bug
+      Auhor: Alejandro Abdelnur
+      Ref: CDH-10099
+    (cherry picked from commit 593e06d3f6ff07f212b312489e3bc705ad0fa51e)
+
+commit 1dfd6ac8e6343d891a954f09a90ef93cd6237834
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Fri Jan 25 15:12:51 2013 -0800
+
+    MR1: CLOUDERA-BUILD. oozie distcp fails on secure mr1 cluster
+    
+      Reason: bug, this is a backport of a functionality present in distcp-v2 (Hadoop2)
+      Author: Alejandro Abdelnur
+      Ref: CDH-9905
+    (cherry picked from commit fafd3187b67b53363c2eebfe7ab5ad56fc4d9684)
+
+commit d42927ed2c453d8c28421197ba99c63682375efc
+Author: Sean Mackrory <sean@cloudera.com>
+Date:   Thu Jan 24 13:55:29 2013 -0800
+
+    MR1: CDH-9274: Oro was removed from Ivy dependencies, removing it from Maven to prevent broken symlinks in packaging
+    (cherry picked from commit c3f64c6260aea1d271a975d012d11ce18a1e360c)
+
+commit ba51bb27a603d64f06196e98b60c49b8899c1010
+Author: Thomas White <tomwhite@apache.org>
+Date:   Wed Jan 23 11:06:39 2013 +0000
+
+    MR1: MAPREDUCE-4929. mapreduce.task.timeout is ignored. Contributed by Sandy Ryza.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1437343 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit f92d8753bc4ab98f68f6556fa802bcd11e1cabfd)
+    
+    Reason: Support/customer request
+    Author: Sandy Ryza
+    Ref: CDH-9078
+    (cherry picked from commit d12250e94b840d90625347e59c16f4bf7292050a)
+
+commit ffca81be31b79cfc1efe4e16f9e8da3c383bb047
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Thu Jan 24 10:27:23 2013 -0800
+
+    MR1: CLOUDERA-BUILD. jt ha does not work in a secure cluster.
+    
+      Reason: bug
+      Author: Alejandro Abdelnur
+      Ref: CDH-9873
+    (cherry picked from commit 49370bb92ca3f1716b16a0b1f42bb70a9850ad98)
+
+commit c61440d840a613c123a9e112cbf5b7c1982dc369
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Wed Jan 23 10:33:14 2013 -0800
+
+    MR1: MAPREDUCE-4808. Allow reduce-side merge to be pluggable. (masokan via tucu)
+    
+      Reason: enable pluggable sort
+      Author: Alejandro Abdelnur
+      Ref: CDH-6920
+    (cherry picked from commit 52d9d41ac127d9fc30f386ebeab846f3e442078c)
+
+commit bdf80cb5bab92bb091fa90033622a2408fdcd8bf
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Wed Jan 23 10:13:11 2013 -0800
+
+    MR1: MAPREDUCE-4807. Allow MapOutputBuffer to be pluggable. (masokan via tucu)
+    
+      Reason: enable pluggable sort
+      Author: Alejandro Abdelnur
+      Ref: CDH-6920
+    (cherry picked from commit 1cd9b817e2ea962fe35e3d79299e32e5ec201134)
+
+commit 8fed6ec19039db292a30512da9a79e831830e7c5
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Wed Jan 23 15:51:14 2013 -0800
+
+    MR1: CLOUDERA-BUILD. Backport MAPREDUCE-4562 to MR1 for compatibility with MR2
+    
+    Reason: Compatibility with MR2
+    Ref: CDH-9978
+    Author: Jarcec
+    (cherry picked from commit 2c3417107f29a02f0027ec02a53663d282112808)
+
+commit db13c78f943fbaa587ed66d29402d3eefa7c6583
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Wed Jan 23 14:48:56 2013 -0800
+
+    MR1: CDH-9701. Revert MAPREDUCE-2492 and other dependent JIRAs. The reverted commits are:
+    
+    e804373 "CDH-9220. Fix TestStreamingStatus to check log contains error"
+    e809c60 "CDH-9220. TestStreamingStatus failing - regression due to CDH-8955"
+    6381204 "Backport MAPREDUCE-4800. Remove Unnecessary code from MapTaskStatus."
+    72a156f "Backport MAPREDUCE-2492. The new MapReduce API should make available task's progress to the task."
+    
+    Reason: Maintain binary compatibility for rolling upgrade
+    Ref: CDH-9701
+    (cherry picked from commit 5b0940b6ca651c11ffe3bad60cd9bf3ef3225617)
+
+commit bba4284d36e04145d8f21faf57e9b8882fd11b55
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Fri Jan 18 00:43:28 2013 +0000
+
+    MR1: MAPREDUCE-4923. Add toString method to TaggedInputSplit. (sandyr via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1434995 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit bed22b230563228cdc5c6366b0af2e5ab48ae63a)
+    
+    Reason: For ZD-10823
+    Author: Sandy Ryza
+    Ref: CDH-9861
+    (cherry picked from commit 69140573dec8fc99bc92e764ee945748aba27877)
+
+commit 2b449065e6e88f30d3acae0ec7a75aea9c5c4778
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Wed Jan 16 23:56:04 2013 +0000
+
+    MR1: MAPREDUCE-4315. jobhistory.jsp throws 500 when a .txt file is found in /done. (sandyr via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1434506 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 61ee40b37429c41d9cbc4c619b6db4a12644dfa0)
+    (cherry picked from commit a6ccb440ce302fcfc6dc64ad167eba08b60da6d4)
+
+commit 461a2d50681b83a529e755e44e99af64b206b38b
+Author: Tom White <tom@cloudera.com>
+Date:   Thu Jan 17 14:48:35 2013 +0000
+
+    MR1: CLOUDERA-BUILD. Don't shut down jobtracker HA process if an error occurs while active jobtracker is being closed.
+    
+    Reason: Bug
+    Ref: CDH-9687
+    Author: Tom White
+    (cherry picked from commit a784698987c20f12ffab50e39e274bd10ba37dc8)
+
+commit b3d16fb52c31293a91e32fad75a90924cadfb573
+Author: Harsh J <harsh@apache.org>
+Date:   Tue Jan 15 14:13:16 2013 +0000
+
+    MR1: MAPREDUCE-4930. Backport MAPREDUCE-4678 and MAPREDUCE-4925 to branch-1. Contributed by Karthik Kambatla and Chris McConnell. (harsh)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1433428 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 3164be4d5b0f574058844cde984f72202a0d5293)
+    
+    Reason: Customer request
+    Ref: CDH-8172
+    Author: Karthik Kambatla and Chris McConnell
+    (cherry picked from commit 88057b1a7a519db5712b2ca71ed2e088250ef300)
+
+commit aa147360a082caf198292c4d6e2b175b2772beec
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Wed Jan 16 01:07:35 2013 +0000
+
+    MR1: MAPREDUCE-4924. flakey test: org.apache.hadoop.mapred.TestClusterMRNotification.testMR. (rkanter via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1433782 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit d0fb29450104fb814e2b492af5db8581f3a02109)
+    (cherry picked from commit 6b22cdf4b73f7b6f5f40da4e8b4f53c6a4b77ce0)
+
+commit cbfedfa912b4f4d0a3e345e1448bc5f5b27cf63c
+Author: Matthew J. Foley <mattf@apache.org>
+Date:   Thu Dec 15 08:51:13 2011 +0000
+
+    MR1: MAPREDUCE-3475. JT can't renew its own tokens. Contributed by Daryn Sharp.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1214660 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 0279d7f6966f430413ed3e13d5be694200127948)
+    (cherry picked from commit 771bd33123f354e26345db98a60e6c0b809c5b9f)
+
+commit 5a9cb256e0a8b1d65e2f5297a97ba4b3840256e5
+Author: Roman Shaposhnik <rvs@cloudera.com>
+Date:   Tue Apr 30 10:28:46 2013 -0700
+
+    MR1: KITCHEN-BUILD. Grafting MR1 code base on top of Hadoop 2.X
+    (cherry picked from commit ca674c72accdde99706ca7b9c4a3b0e3fa1477e8)
+
+commit 8f7425db671218b0509be284a06acbfc108e55e6
+Author: Tom White <tom@cloudera.com>
+Date:   Tue Jan 15 21:16:34 2013 +0000
+
+    MR1: CLOUDERA-BUILD. Avoid port conflicts in JT HA tests.
+    
+    Reason: Test
+    Ref: CDH-9819
+    Author: Tom White
+    (cherry picked from commit 32d099f77bc3dacb69d4600099e2b97fbd4c9ccb)
+
+commit 63b9e4c5d9c0162a5b05127a7888f7bc0ef63b3b
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Tue Jan 15 10:39:42 2013 -0800
+
+    MR1: CLOUDERA-BUILD. JT HA: Support delegation tokens with logical JT names under JT HA
+    
+      Reason: bug
+      Author: Alejandro Abdelnur
+      Ref: CDH-9178/CDH-9615
+    (cherry picked from commit 2d12742d9557d58da5d8767d2c75027fa770f664)
+
+commit f699ffcea2f6109fcaa79ed3524565b79e8fe699
+Author: Robert Kanter <rkanter@cloudera.com>
+Date:   Mon Jan 14 11:55:19 2013 -0800
+
+    MR1: CLOUDERA-BUILD. mapreduce.FileOutputCommitter#abortTask should throw IOException (CDH-9238)
+    (cherry picked from commit 76f2ca9318a5eb8157cec187246762407287afab)
+
+commit 3dae6192258c93def6382e1e6cb88b19890247e6
+Author: Robert Joseph Evans <bobby@apache.org>
+Date:   Fri Jan 11 19:26:29 2013 +0000
+
+    MR1: MAPREDUCE-4933. MR1 final merge asks for length of file it just wrote before flushing it. Contributed by Sandy Ryza
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1432243 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 82dafad81421ef839d578b6a6da00841bfae7f34)
+    
+    Reason: So that MAPREDUCE-2264 won't cause tests to fail.
+    Author: Sandy Ryza
+    Ref: CDH-7179
+    (cherry picked from commit aef587c0489a9949db186398452e603fbf0433f8)
+
+commit d94989185023dea8c9c983d86304df805f56d9d9
+Author: Tom White <tom@cloudera.com>
+Date:   Tue Dec 4 17:52:19 2012 +0000
+
+    MR1: CLOUDERA-BUILD. Add a stress test for JT HA.
+    
+    Reason: Test
+    Ref: CDH-9371
+    Author: Tom White
+    (cherry picked from commit 7504478d516fb74752ec1dac98c6b3e72b03f3f1)
+
+commit 00b91b912f05c8209d4b16b3581e8b7500cf685f
+Author: Robert Kanter <rkanter@cloudera.com>
+Date:   Thu Jan 10 22:06:01 2013 -0800
+
+    MR1: CLOUDERA-BUILD. Simple fix for org.apache.hadoop.streaming.TestMultipleCachefiles.testMultipleCachefiles failing
+    
+    This code change is already in upstream branch-1
+    CDH-9766
+    (cherry picked from commit 61933e12733631e6ac66ba8068d8c7333331cde1)
+
+commit 01193ef7c28c7acc529c2dc69486bbfd12698e9c
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Thu Jan 10 00:55:11 2013 +0000
+
+    MR1: MAPREDUCE-4907. TrackerDistributedCacheManager issues too many getFileStatus calls. (sandyr via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1431168 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit e5f94cdecc0226cd95ef3deff738cb0cf199416b)
+    (cherry picked from commit 7f87758ea036d3cdc0f638a15321cabf16f270ed)
+
+commit 3fbd7b29f7dd56eba1bfe3866ce99b883a062460
+Author: Tom White <tom@cloudera.com>
+Date:   Wed Jan 9 17:59:27 2013 +0000
+
+    MR1: HADOOP-9051 Fix ant clean/test with circular symlinks in build dir. (llu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1422178 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit a33d9c2569bbc2be3d2c975836fa354f635f8358)
+
+commit 44b4370d735312f4820bb6db6904b4f4c6c7bf3e
+Author: Tom White <tom@cloudera.com>
+Date:   Wed Dec 5 15:46:11 2012 +0000
+
+    MR1: MAPREDUCE-4850. Job recovery may fail if staging directory has been deleted.
+    (cherry picked from commit 534395696e5633a68e3e15245ce9e4316b5d7627)
+
+commit 863a466f68ae9354f7ba2c9a8cec08aa1508c5fd
+Author: Thomas White <tomwhite@apache.org>
+Date:   Tue Jan 8 16:37:41 2013 +0000
+
+    MR1: MAPREDUCE-4278. Cannot run two local jobs in parallel from the same gateway. Contributed by Sandy Ryza.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1430371 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 9e1e587fa68aef4e6c2eaa7f72d15833790077b5)
+    (cherry picked from commit 6e782b2da7950624ccc106d8e068cfc2c2fcf3fb)
+
+commit 1e12e12752aaa7633388c788d14889580fbaff79
+Author: Harsh J <harsh@apache.org>
+Date:   Thu Sep 27 16:33:51 2012 +0000
+
+    MR1: MAPREDUCE-4464. Reduce tasks failing with NullPointerException in ConcurrentHashMap.get(). Contributed by Clint Heath. (harsh)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1391089 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit f7b6d7ab0173d4e863bb45399a2aea4551f48c69)
+    (cherry picked from commit 18b9664d4505262463ad426e52af7453fe1d349c)
+
+commit 8a323d7a630d71be8563016810d0e5913fd82006
+Author: Tom White <tom@cloudera.com>
+Date:   Mon Jan 7 14:48:53 2013 +0000
+
+    MR1: CLOUDERA-BUILD. JT HA: Further fix to ignore port in logical names.
+    
+    Reason: Bug
+    Ref: CDH-9608
+    Author: Tom White
+    (cherry picked from commit 3c4bfcca980efee1791fa20a7e3d3beb585d72fb)
+
+commit 5b4b94fb61011ed0971ca9073f57cf2db2f83fcb
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Thu Jan 3 11:49:55 2013 +0000
+
+    MR1: MAPREDUCE-2217. The expire launching task should cover the UNASSIGNED task. (schen and kkambatl via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1428304 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 6a4e45250b89b01920e6d8ab86623c08304c2229)
+    
+    Reason: Tasks hang in the UNASSIGNED state on faulty TTs
+    Ref: CDH-8889
+    Author: Karthik Kambatla and Scott Chen
+    (cherry picked from commit 0a8de08994494517d95139dbd174ab47e523db21)
+
+commit 22dc52abcb50dd3601673271c75bf61c8c6c7104
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Fri Jan 4 10:40:29 2013 +0100
+
+    MR1: CLOUDERA-BUILD. JT HA: if neither jt is active, web ui redirect leads to a redirect loop.
+    
+      Reason: bug
+      Author: Alejandro Abdelnur
+      Ref: CDH-9676
+    (cherry picked from commit f289889adbb5c5bd72b60d9c88b3ce19e04316fd)
+
+commit 3cb64ba2c6281235c3e85eedf306b7f4218587fe
+Author: Robert Kanter <rkanter@cloudera.com>
+Date:   Thu Jan 3 12:59:34 2013 -0800
+
+    MR1: MAPREDUCE-3607. Port missing new API mapreduce lib classes to 1.x. (Adding some missing files/changes from the original backport)
+    
+    Original backport at commit: c0075b2a0de23e41a3ae600f5fdd5e9c181c4c15
+    (cherry picked from commit c9f40e5b1e7d570ee870f1c4094c512bc1eebb39)
+
+commit 11dd0d3d15a525258c72f0606c1e9cfb5c17a692
+Author: Tom White <tom@cloudera.com>
+Date:   Wed Jan 2 16:31:46 2013 +0000
+
+    MR1: CLOUDERA-BUILD. JT HA: Ignore port in logical names.
+    
+    Reason: Bug
+    Ref: CDH-9608
+    Author: Tom White
+    (cherry picked from commit a9ec4ec25e2670053e36d454c0edff74d531f543)
+
+commit 47b9dec161037a89f80e786cc60812ef8de574b7
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Thu Jan 3 15:45:54 2013 +0100
+
+    MR1: CLOUDERA-BUILD. Create service file for MapReduce DelegationTokenIdentifier.
+    
+      Reason: bug
+      Author: Alejandro Abdelnur
+      Ref: CDH-9373
+    (cherry picked from commit c538904e466c0b2a9f0f6844b92675c3e2b69809)
+
+commit f9b2ce57755c0ef59d9fb6f7b976e4dc8dc3d4a4
+Author: Robert Joseph Evans <bobby@apache.org>
+Date:   Tue Apr 10 20:14:23 2012 +0000
+
+    MR1: MAPREDUCE-1238. mapred metrics shows negative count of waiting maps and reduces (tgraves via bobby)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1311966 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 15c91ff34b4bd0a53e53d3c9dfb02472d0012539)
+    
+    Reason: Metrics report negative number of waiting maps and reduces
+    Ref: CDH-8336
+    Author: Sandy Ryza
+    (cherry picked from commit 0526b7f0bbe2d2bcfaed93dc21e13d4fd0284c48)
+
+commit 61a9c928c02fcdcd9107a0314ce2bc3c0395e7d2
+Author: Sandy Ryza <sandy@cloudera.com>
+Date:   Sun Dec 23 10:43:59 2012 -0800
+
+    MR1: CLOUDERA_BUILD. Fix TokenCache to compile after HADOOP-7967
+    
+    Reason: Fix compilation
+    Ref: CDH-9617
+    Author: Sandy Ryza
+    (cherry picked from commit f31443c43050d2736b548a428290e172bef0d3fe)
+
+commit 6f1ec0529c4290148c8064e056ea7447c77e535e
+Author: Mark Grover <grover.markgrover@gmail.com>
+Date:   Wed Dec 19 17:56:04 2012 -0800
+
+    MR1: CDH-8545: Package Job Tracker High Availability
+    (cherry picked from commit 811f240349e85130942d2acecd5c103a5c1dacc9)
+
+commit 28cfdfa5f60aa4b316561bb592469ad6c6bfca2a
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Wed Dec 19 13:22:02 2012 -0800
+
+    MR1: CLOUDERA_BUILD. Ignore TestRecoveryManager#testJobTrackerRestartsWithMissingJobFile
+    
+    Reason: Temporarily ignore failing test
+    Ref: CDH-9566
+    Author: Karthik Kambatla
+    (cherry picked from commit 1a70297025fd4ae3ae58c4d5502f509af8548935)
+
+commit 86fd401ed73de669eba7f186e29fd483a14055c1
+Author: Tom White <tom@cloudera.com>
+Date:   Wed Dec 19 12:46:45 2012 +0000
+
+    MR1: CLOUDERA-BUILD. JT HA: should not need to specify mapred.ha.jobtracker.id
+    
+    Reason: Bug
+    Ref: CDH-9490
+    Author: Tom White
+    (cherry picked from commit 8e1e13b46edc2fb06f9e3d15a73cde19d96d0df6)
+
+commit 5e80f1a03223a66104677aa3b6234db76893cc2b
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Thu Dec 13 22:32:22 2012 +0000
+
+    MR1: MAPREDUCE-4860. DelegationTokenRenewal attempts to renew token even after a job is removed. (kkambatl via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1421582 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit f89fdb59ea132ba9e74bfb53cce788584d2e9639)
+    
+    Reason: Fix failing tests
+    Ref: CDH-9041
+    Author: Karthik Kambatla
+    (cherry picked from commit 9c8b1ab453053b942c93aad2558af2805c4ee68c)
+
+commit 30cbbd9e37a0bf0fe2849a734e9bedcb0613e090
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Tue Dec 18 17:13:56 2012 -0800
+
+    MR1: CLOUDERA_BUILD. Fix TestQueueManagerForJobKill* tests that fail post HDFS-2264
+    
+    Reason: Fix failing tests
+    Ref: CDH-9469
+    Author: Karthik Kambatla
+    (cherry picked from commit d62bdfe8b197b02edfad8225afa2f49e669cb717)
+
+commit d754d81159f3eebf27033da448f72f47e02e8384
+Author: Thomas White <tomwhite@apache.org>
+Date:   Tue Dec 18 15:26:29 2012 +0000
+
+    MR1: MAPREDUCE-4845. ClusterStatus.getMaxMemory() and getUsedMemory() exist in MR1 but not MR2. Contributed by Sandy Ryza.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1423472 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit ccee91c60f729843d4309142d24f8acf0b002eac)
+    (cherry picked from commit 132ff7182f2c6e15cc85bb7e31cec659c8088fa2)
+
+commit b9c9edb4cfd10e353db0036bd47db13e80d8ebb2
+Author: Tom White <tom@cloudera.com>
+Date:   Tue Dec 18 12:32:51 2012 +0000
+
+    MR1: MAPREDUCE-4824. Provide a mechanism for jobs to indicate they should not be recovered on restart.
+    
+    Reason: New feature
+    Author: Tom White
+    Ref: CDH-8915
+    (cherry picked from commit b12d8a59084b3ddf4695d20c8782a59002037838)
+
+commit 437c87c650fe7b97894de23a297637808e31883e
+Author: Tom White <tom@cloudera.com>
+Date:   Mon Dec 17 17:43:57 2012 +0000
+
+    MR1: MAPREDUCE-4859. TestRecoveryManager fails on branch-1.
+    
+    Reason: Fix tests
+    Author: Tom White
+    Ref: CDH-9543
+    (cherry picked from commit 1da0871db87563dff340ef2b2b1a9a9560efa46b)
+
+commit 98a8b205f6293eb5780b35fe0d14b04736f8bf3e
+Author: Tom White <tom@cloudera.com>
+Date:   Mon Dec 10 12:04:51 2012 +0000
+
+    MR1: CLOUDERA_BUILD. Change ZooKeeper version to version in rest of stack.
+    
+    Reason: Consistency
+    Ref: CDH-9257
+    Author: Tom White
+    (cherry picked from commit 697a18d9fc6be202aa054e037a6283d580768424)
+
+commit 1209309e16f291117431a379bb3833786a76b51b
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Tue Dec 11 14:00:04 2012 -0800
+
+    MR1: CLOUDERA-BUILD. Fix DataChecksum API usage to reflect HADOOP-8700 changes
+    
+    Reason: Fix the build
+    Ref: CDH-9432
+    Author: Karthik Kambatla
+    (cherry picked from commit 5ccf61ab49ccd89813b3ecc1bac6504c7a9575d1)
+
+commit a2081be2572964cea6d49dcbaf6d401bc35d02cf
+Author: Tom White <tom@cloudera.com>
+Date:   Mon Dec 10 11:28:34 2012 +0000
+
+    MR1: CLOUDERA_BUILD. Revert ZooKeeper version to 3.4.2.
+    
+    Reason: Regression
+    Ref: CDH-8916
+    Author: Tom White
+    (cherry picked from commit 55670309aa6482e4f9ade62d20ff26cea27e19f3)
+
+commit 925c9a5a7b9a0b8c3d0422df0347e42bd8dd8969
+Author: Tom White <tom@cloudera.com>
+Date:   Tue Dec 4 14:38:57 2012 +0000
+
+    MR1: CLOUDERA_BUILD. Implement software fencing for JT HA.
+    
+    Reason: New feature
+    Ref: CDH-8916
+    Author: Tom White
+    (cherry picked from commit 4b73555224e1e42448935d59ce930634dfb115e6)
+
+commit 5d2e476f59303e34128bfebd14b9247a6d379fec
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Thu Dec 6 16:48:33 2012 -0800
+
+    MR1: CDH-9220. Fix TestStreamingStatus to check log contains error
+    
+    Reason: Test failure
+    Ref: CDH-9220
+    Author: Karthik Kambatla
+    (cherry picked from commit 42e0089c14b802bfe88c5ce956ae48e2bc9c3f3c)
+
+commit 96a56b3f54926c93d88788525384ea163e95fcf1
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Tue Dec 4 18:50:02 2012 -0800
+
+    MR1: CDH-9220. TestStreamingStatus failing - regression due to CDH-8955
+    	  Fix TestStreamingStatus#validateTaskStatus to set finalPhase of
+    	  map task to be sort
+    Reason: Fix regression test failure
+    Ref: CDH-9220
+    Author: Karthik Kambatla
+    (cherry picked from commit d263b3f2d8c127956a0dd1c2a12b126a9cbb6611)
+
+commit 2ce91b33959e3feed33cd969689a735ee39dc634
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Tue Dec 4 15:01:51 2012 -0800
+
+    MR1: CDH-9273. Fix the bug caused by CDH-8955 (ContextFactory doesn't reflect other changes)
+    
+    Reason: Bug fix (unit tests fix)
+    Ref: CDH-9273
+    Author: Karthik Kambatla
+    (cherry picked from commit 1a75260397da059848589e7125e976b452c64287)
+
+commit 4910276be2f91a53f98a40d59b45bcd539b0a5c5
+Author: Thomas White <tomwhite@apache.org>
+Date:   Wed Nov 28 14:43:28 2012 +0000
+
+    MR1: MAPREDUCE-4778. Fair scheduler event log is only written if directory exists on HDFS. Contributed by Sandy Ryza.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1414731 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit ef32c3f8fcafe90eeb63a1cfc42969c058abf190)
+    (cherry picked from commit 9e85bcddf493a3ad6a4fb7789d6329bc9dc2e5b7)
+
+commit 9a395cc93b04ed4ca3058984d2991015f3ece7f7
+Author: Tom White <tom@cloudera.com>
+Date:   Thu Oct 4 11:30:36 2012 +0100
+
+    MR1: CLOUDERA_BUILD. JobTracker HA.
+    
+    Reason: New feature
+    Ref: CDH-8379
+    Author: Tom White
+    (cherry picked from commit 88974b177887f61601b403b6f16613b26b452d0f)
+
+commit a69e1fb29ec6fb3f64c9739838694a6461154466
+Author: Harsh J <harsh@cloudera.com>
+Date:   Mon Nov 26 17:05:02 2012 +0530
+
+    MR1: MAPREDUCE-3678. The Map tasks logs should carry the input split it processed.
+    
+    Description: MR map tasks don't currently log the splits they use, so its harder to debug to find the file behind a specific failed task.
+    Reason: Customer Request
+    Author: Harsh J
+    Ref: CDH-6951
+    (cherry picked from commit 936928b81f73340a7f04f1f043cfe33bd9fdd4bb)
+
+commit 2b33104a079d0af3bdd7823bc30bf71809deed11
+Author: Roman Shaposhnik <rvs@cloudera.com>
+Date:   Sat Nov 24 20:17:13 2012 -0800
+
+    MR1: CDH-7625. buildscript from mr1-2.0.0-mr1-cdh4.0.1.tar.gz is misleading and the needed one is missing
+    (cherry picked from commit cab5312ee97e99cee8871752a683f907553b2507)
+
+commit 4f633e8fb8d867ce513a8eb8a7b25b3ee9e4e231
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Mon Nov 19 16:54:42 2012 -0800
+
+    MR1: Backport MAPREDUCE-4800. Remove Unnecessary code from MapTaskStatus.
+    
+    Reason: Part of the fix for CDH-8955 (Mapper progress is not reported)
+    Ref: CDH-8955
+    Author: Karthik Kambatla
+    (cherry picked from commit 71d8852bb5bbf0b9325387f263883df5d4e289b4)
+
+commit 2e2811ea38cdf70d6e80353631fd15b5847078d6
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Fri Nov 9 16:10:56 2012 -0800
+
+    MR1: Backport MAPREDUCE-2492. The new MapReduce API should make available task's progress to the task.
+    Also, backport relevant/related parts of MAPREDUCE-318 and HADOOP-4687
+    
+    Reason: Bug fix - New API not updating the progress correctly
+    Ref: CDH-8955
+    Author: Amar Kamat
+    (cherry picked from commit dcfc849e70d39523a46933aef548157d391f10ab)
+
+commit b1034d7c375f925e699e4a5f70dc1b08e6fbc239
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Fri Nov 9 14:11:36 2012 -0800
+
+    MR1: Backport MAPREDUCE-1905. Fix Context.setStatus() and Context.progress APIs
+    
+    Reason: Bug fix - Status and progress not being reported correctly
+    Ref: CDH-8955
+    Author: Amareshwari Sriramadasu
+    (cherry picked from commit a67d72bd2a9e29f651fac858d0aed3db4bd0e9aa)
+
+commit 93b2fa2fbb53c6f15df358b5dd1ad4141be6f50d
+Author: Roman Shaposhnik <rvs@cloudera.com>
+Date:   Tue Nov 20 15:59:31 2012 -0800
+
+    MR1: CDH-7625. buildscript from mr1-2.0.0-mr1-cdh4.0.1.tar.gz is misleading and the needed one is missing
+    (cherry picked from commit d556575c4848403951b630522e98ce74cc7fa0da)
+
+commit 89aac742305d256b271a8a748872a52c6bef54f1
+Author: Robert Joseph Evans <bobby@apache.org>
+Date:   Fri Sep 7 16:47:42 2012 +0000
+
+    MR1: MAPREDUCE-4629. Remove JobHistory.DEBUG_MODE (Karthik Kambatla via bobby)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1382090 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit a66cfeb30adc3bf68c6457ef5419e96f4243a40b)
+    
+    Reason: Fix customer issue in disabled debug mode
+    Ref: CDH-8600
+    Author: Karthik Kambatla
+    (cherry picked from commit c0dc6e2af12f0f15160cde320d664b738bd2cfca)
+    (cherry picked from commit c17f5303320721991387a6ef77babcf6d1a88b45)
+
+commit 5fc110748942aa2d38b3503d56e630c0dc68b31c
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Wed Nov 7 21:13:11 2012 +0000
+
+    MR1: MAPREDUCE-4765. Restarting the JobTracker programmatically can cause DelegationTokenRenewal to throw an exception. (rkanter via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1406810 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit f825dbb8c23bd5c8f63bf1e0224ffff6bcf258a6)
+    (cherry picked from commit ba477c0a76bad76b0cfa570b33ea8711a4c8c565)
+
+commit d5feeed300d2cbf13798476297aa39c36e42a443
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Tue Oct 30 05:49:04 2012 +0000
+
+    MR1: MAPREDUCE-1806. CombineFileInputFormat does not work with paths not on default FS. (Gera Shegalov via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1403617 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 07244962b26e92e47f261f7db308278105c526ee)
+    (cherry picked from commit 7ac5779080ed1cdf9f7d33d70e4905171404d690)
+
+commit b5fa08d5c5746c438c4e8b4ee4fd7ddc96891741
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Thu Oct 25 16:01:47 2012 -0700
+
+    MR1: HADOOP-8968. add flag to disable completely version check in the TaskTracker and DataNode. (tucu)
+    
+      Reason: to enable rolling upgrades
+      Author: Alejandro Abdelnur
+      Ref: CDH-8562
+    (cherry picked from commit 854e378f704d7f9d7d3816359c76190636fa220c)
+
+commit 931e1838935142538c229529ee3c6961e91a638c
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Thu Oct 11 21:53:25 2012 +0000
+
+    MR1: MAPREDUCE-4451. fairscheduler fail to init job with kerberos authentication configured. (erik.fang via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1397330 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 82fae0f9071121bdcde24f04336a05901b120b85)
+    
+    Reason: FairScheduler job initialization issues on secure cluster
+    Ref: CDH-7461
+    Author: Erik Fang
+    (cherry picked from commit 09f12262a74649171e086c2fff7a3d0ed6dd63a1)
+    (cherry picked from commit 3005ab3b736bae3ba6d45b930bcc6fb7558178ca)
+
+commit 4891eddcfa27a02e7f53e5d99e28786931287351
+Author: Roman Shaposhnik <rvs@cloudera.com>
+Date:   Mon Oct 8 14:23:52 2012 -0700
+
+    MR1: CLOUDERA-BUILD. mr1 tarball build requires native (CDH-7918)
+    (cherry picked from commit 982f4df0e3cbd63dde30e2c547628e5b51cfae91)
+
+commit 2878d541ce891175d09b98105e17a0c0cea3b000
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Thu Oct 4 23:55:26 2012 +0000
+
+    MR1: MAPREDUCE-4556. FairScheduler: PoolSchedulable#updateDemand() has potential redundant computation (kkambatl via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1394331 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit ceb0b88f68b1da45a3ab854edecd0e040f5937bb)
+    
+    Reason: FS Optimization
+    Ref: CDH-8454
+    Author: Karthik Kambatla
+    (cherry picked from commit f231e7eaa380a68c54f8ae287fbaa89767dd067b)
+    (cherry picked from commit 3e2c5d5adaa6f3e8dcb34e18f2799a937ed2d601)
+
+commit 58eb7e758d0a9dc47bd809efdeda5849baac04db
+Author: Thomas White <tomwhite@apache.org>
+Date:   Mon Oct 8 11:44:42 2012 +0000
+
+    MR1: MAPREDUCE-4706. FairScheduler#dump(): Computing of # running maps and reduces is commented out. Contributed by Karthik Kambatla.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1395520 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 31c02cb4b0be9f298f11f7fac584ee603afb4973)
+    
+    Reason: Bug fix (Better debugging of FS)
+    Ref: CDH-8210
+    Author: Karthik Kambatla
+    (cherry picked from commit df1cad6a6ec42818840282816ddad9fb137bbe32)
+    (cherry picked from commit fbbe8987b7da681f7e9b2a582c1951b9ae3b6552)
+
+commit e39fcd99ab5e94f002e7efaa6e3583fc7fa4b4a8
+Author: Robert Kanter <rkanter@cloudera.com>
+Date:   Fri Oct 5 16:37:04 2012 -0700
+
+    MR1: MAPREDUCE-2786. TestDFSIO should also test compression reading/writing from command-line.
+    (cherry picked from commit 580667885455d6eb59b6145796dee94598f49d8c)
+
+commit 82c98dc66900aac3298bb6070d1b421bc81843d8
+Author: Robert Kanter <rkanter@cloudera.com>
+Date:   Mon Oct 8 09:37:15 2012 -0700
+
+    MR1: CLOUDERA-BUILD. fix to allow hadoop-test jar to run in MR1 (CDH-8097)
+    (cherry picked from commit 97d3600bc1c1772322079c8dd28d6c33e257dd68)
+
+commit 8a1834465e5bd488a6b711e3d9d9aaeeee700d43
+Author: Thomas White <tomwhite@apache.org>
+Date:   Tue Sep 25 11:51:19 2012 +0000
+
+    MR1: MAPREDUCE-4652. ValueAggregatorJob sets the wrong job jar. Contributed by Ahmed Radwan.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1389821 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit c048b3d0de706c4a7b0769d9cdd5e2a297c74228)
+
+commit 6617b20255f3fd841eff524adc91ec3e4910181b
+Author: Eli Collins <eli@cloudera.com>
+Date:   Fri Sep 21 13:18:15 2012 -0700
+
+    MR1: CLOUDERA-BUILD. Point *-default doc links to the right place.
+    (cherry picked from commit d4680264f96587dc8fda54fa264db45bc35fc1b4)
+
+commit 859cab9786816a0b1eb978ee378909ebdb7381f3
+Author: Tom White <tom@cloudera.com>
+Date:   Wed Sep 19 11:06:54 2012 +0100
+
+    MR1: MAPREDUCE-2185. Infinite loop at creating splits using CombineFileInputFormat
+    
+    Reason: Regression
+    Ref: CDH-8046
+    Author: Ramkumar Vadali
+    (cherry picked from commit 8292191d239edf2e19042e0388edb7254cbdf292)
+    (cherry picked from commit dad57a62c118517772fdebe2677017dc09fb36a2)
+
+commit a4ea9a5ca13f4552d740cbc1775e054a46a4012e
+Author: Tom White <tom@cloudera.com>
+Date:   Wed Sep 19 10:56:27 2012 +0100
+
+    MR1: MAPREDUCE-4470. Fix TestCombineFileInputFormat.testForEmptyFile
+    
+    Reason: Regression
+    Ref: CDH-8046
+    Author: Ilya Katsov
+    (cherry picked from commit 7ee3100b5814f304b34f936aa442ca6af47020d8)
+    (cherry picked from commit 28ec7168e490444d5355715c11d2cada9885c5dc)
+
+commit eacaa1fb81995811b07827834156adaa18664dab
+Author: Tom White <tom@cloudera.com>
+Date:   Tue Sep 18 17:03:13 2012 +0100
+
+    MR1: CLOUDERA-BUILD. MR1 returns 0 splits when the input directory is empty
+    
+    Reason: Regression
+    Ref: CDH-8046
+    Author: Tom White
+    (cherry picked from commit 8cd53b02af406640f30ad76a6ce80fc0b8660db4)
+    (cherry picked from commit 3b2d828c12dc05df528f72fa6c8572fcf9201857)
+
+commit d4aa1bd3dfcd68b7d70405b2ae53981becd61bc1
+Author: Andrew Bayer <andrew@cloudera.com>
+Date:   Thu Sep 13 09:40:24 2012 -0700
+
+    MR1: CLOUDERA-BUILD. Updating build.xml's version to be consistent.
+    (cherry picked from commit 4d624b58457c7a51a670bc1e34cc9f7d12456281)
+
+commit 18be41a2f340c1f780d2b84990ca54df2ae72dd5
+Author: Tom White <tom@cloudera.com>
+Date:   Wed Sep 12 13:21:25 2012 +0100
+
+    MR1: CLOUDERA-BUILD. JobClient constructors should call setConf(conf).
+    
+    Reason: Bug
+    Ref: CDH-7900
+    Author: Tom White
+    (cherry picked from commit c166f79e00d08d182fc69010f1ef2a4b41f7f9cb)
+    (cherry picked from commit b4e03e62f082fe291622879b558f6471c88a6b4f)
+
+commit 8b6865d87e480668f4c113ff55450f60e04129ba
+Author: Tom White <tom@cloudera.com>
+Date:   Wed Sep 12 14:40:17 2012 +0100
+
+    MR1: HDFS-3910 (DFSTestUtil#waitReplication should timeout).
+    
+    Reason: Improvement
+    Ref: CDH-7935
+    Author: Eli Collins and Tom White
+    (cherry picked from commit 7405ca726f8ccf360f1206d14c393be19c32fb18)
+    (cherry picked from commit 7f619ed9fce353788a5fd16eb627d77925ac9729)
+
+commit 876fcf690e67386ce4c318aee1b7ea0dc38b0ee4
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Mon Sep 10 22:49:52 2012 +0000
+
+    MR1: HADOOP-8781. hadoop-config.sh should add JAVA_LIBRARY_PATH to LD_LIBRARY_PATH. (tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1383145 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 60c49a8e938219585c42ad167d040a0431fb9fa5)
+    
+    Conflicts:
+    
+    	CHANGES.txt
+    (cherry picked from commit 724c9436a12539ab9afe164f538c24792e48a133)
+
+commit 1d31e1c7c4aab0dd5d559f6b0c1df3caaa060bb2
+Author: Sean Mackrory <sean@cloudera.com>
+Date:   Fri Sep 7 15:26:42 2012 -0700
+
+    MR1: CDH-6973: Mockito needs to be distributed because hadoop-test.jar needs it at runtime
+    (cherry picked from commit 4995d1349527b0a5763a85a0bc4c8a0fce0c148e)
+
+commit 240db25e1aae210c353e5cf95d56110c013e6c3e
+Author: Jenkins slave <kitchen-build@cloudera.com>
+Date:   Thu Sep 6 15:39:50 2012 -0700
+
+    MR1: Preparing for CDH4.2.0 development
+    (cherry picked from commit 5ef896e667ef772073b8ed4b0379913397b08489)
+
+commit 573504d53cb79934d2ba2101600176882aeb65b6
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Thu Sep 6 12:09:40 2012 -0700
+
+    MR1: CLOUDERA-BUILD. embedded jetty may fail to start about 1/5000 times
+    
+    Upgrades Jetty dependency to 6.1.26.cloudera.2. This addreses
+    a race condition (JETTY-1316) which caused the Acceptor thread
+    to sometimes not start, which caused reducer fetch timeouts, etc.
+    
+    The source for this Jetty release can be found at
+    https://github.com/cloudera/jetty-hadoop-fix and corresponds to
+    commit 51042f4a6cd36fe90be7c0f0d208dca5397b527a in that repository.
+    
+    Author: Todd Lipcon
+    Ref: CDH-7767, MAPREDUCE-3851
+    (cherry picked from commit f7e07b7f2b00418368a502d676e7fcefc1eb2fed)
+
+commit 40a833ceb2d51eed006318d9a3aac695579ffbd8
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Tue Sep 4 16:22:41 2012 -0700
+
+    MR1: CLOUDERA-BUILD. Disable JobHistory.DEBUG_MODE by default.
+    
+    Reason: Fix build (TestLostTracker)
+    Ref: CDH-7104
+    Author: Arun Murthy/Karthik Kambatla
+    (cherry picked from commit 496aa72ac6641f82073e25a1c1783778a7b564fd)
+
+commit 126962b15350e016ab9508aa2c2e1c640c2e85a2
+Author: Tom White <tom@cloudera.com>
+Date:   Fri Aug 31 10:39:53 2012 +0100
+
+    MR1: MAPREDUCE-4610. Support deprecated mapreduce.job.counters.limit property in MR2.
+    
+    Reason: Compatibility
+    Ref: CDH-7678
+    Author: Tom White
+    (cherry picked from commit 36442f5f8b2f2aa1044a1f21740a792698b7e218)
+
+commit f3ec4f2af7b9e2689234628c83dfacaa8f05c134
+Author: Owen O'Malley <omalley@apache.org>
+Date:   Wed Sep 21 20:30:55 2011 +0000
+
+    MR1: HADOOP-7644. Add forgotten service provider file.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-0.20-security@1173833 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 240940f4cb9b657b1ed92cf7e913bb140f885964)
+    (cherry picked from commit d8cb7da2786978214b03ecef4a4589f34501cfb8)
+
+commit a9cd216053d372c37db490a7b1af0791facb4fc9
+Author: Owen O'Malley <omalley@apache.org>
+Date:   Thu Sep 15 22:22:14 2011 +0000
+
+    MR1: HADOOP-7644. Fix TestDelegationTokenRenewal and TestDelegationTokenFetcher
+    to use and test the new style renewers. (omalley)
+    
+    MapReduce part of:
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-0.20-security@1171298 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 7142897eee9f7db0d7aa3785d6cb5e1701af7dcb)
+    
+    Reason: Bug
+    Ref: CDH-6189
+    Author: Owen O'Malley
+    (cherry picked from commit 113c6567b2b01098b667eb38c543f16928c78345)
+
+commit d41262a17176457f403062b2c518ed74bc1319a1
+Author: Owen O'Malley <omalley@apache.org>
+Date:   Fri Sep 9 22:07:35 2011 +0000
+
+    MR1: MAPREDUCE-2764. Allow JobTracker to renew and cancel arbitrary token types,
+    including delegation tokens obtained via hftp. (omalley)
+    
+    MapReduce part of:
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-0.20-security@1167374 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit ef21eca97f1d10489003e30435acab24010a2209)
+    
+    Reason: Bug
+    Ref: CDH-6189
+    Author: Owen O'Malley
+    (cherry picked from commit f1f99f3207c9c93b75c632b65f48b3fa71d16dca)
+
+commit da3c4e9b152935810751b0e7be98bfaa6abdf429
+Author: Devaraj Das <ddas@apache.org>
+Date:   Thu Jun 2 05:03:36 2011 +0000
+
+    MR1: MAPREDUCE-2452. Moves the cancellation of delegation tokens to a separate thread. Contributed by Devaraj Das.
+    
+    MapReduce part of:
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-0.20-security@1130409 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 4d01aab294ad571e6e1915dc710f31d1aeedd3a3)
+    
+    Reason: Bug
+    Ref: CDH-6189
+    Author: Devaraj Das
+    (cherry picked from commit 8ce67fe4e75a9febd093af8e347b39bca92ddbe2)
+
+commit d29278b3deea89fdb9b2c30eaa6e5094bc5094ee
+Author: Tom White <tom@cloudera.com>
+Date:   Wed Aug 29 18:02:53 2012 +0100
+
+    MR1: CLOUDERA-BUILD. MR1 does not have "mradmin -refreshServiceAcl" implemented
+    
+    Reason: Bug
+    Ref: CDH-7644
+    Author: Tom White
+    (cherry picked from commit 8f11de3e8fc212ce00efdf0998327d8e727996bd)
+
+commit 37deb5f6dfb7bbd7f60bb170806c364fa76d0628
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Fri Aug 24 23:42:55 2012 +0000
+
+    MR1: MAPREDUCE-4408. allow jobs to set a JAR that is in the distributed cached (rkanter via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1377152 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 7c0d407e828e2f70969097c4c0509bec45b73a7f)
+    (cherry picked from commit aac0a35400306e18ebdbb7767b828663f7386b71)
+
+commit 317c5037509bbdc1130509218e0ff0105aa3f28e
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Mon Aug 27 22:38:13 2012 +0000
+
+    MR1: MAPREDUCE-4595. TestLostTracker failing - possibly due to a race in JobHistory.JobHistoryFilesManager#run() (kkambatl via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1377895 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 327f6378f2cdb9923b2b54a3ef39f8b207ff8173)
+    
+    Reason: TestLostTracker fails due to a race
+    Ref: CDH-7104
+    Author: Karthik Kambatla
+    (cherry picked from commit f884f7855d610a8f61a277206c9c443e481f274c)
+
+commit ede4af4a6577f196fb136d9b9493742c8cadb7d3
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Thu Aug 23 14:05:23 2012 -0700
+
+    MR1: CDH-7619. TT uses MRAsyncDiskService to delete only specific directories at init/close
+    
+    Reason: Mimic upstream behavior w.r.t creating/deleting directories at startup/shutdown
+    Ref: CDH-7619
+    Author: Karthik Kambatla
+    (cherry picked from commit 5f11033e622bfd9ebcc135fb070431d67353c25f)
+
+commit 6045eb4d87c4bebe0349306666eb7847e1ae4be6
+Author: Aaron Twining Myers <atm@apache.org>
+Date:   Thu Aug 23 18:30:43 2012 +0000
+
+    MR1: MAPREDUCE-2374. "Text File Busy" errors launching MR tasks. Contributed by Andy Isaacson.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1376639 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 5e3e5ec4597257ebb4903cfa8c745ac892d41755)
+    (cherry picked from commit 9e078e31d70b9b8d0f4719075bd57cb4974adef2)
+
+commit 41a4d3150e165b312ec07615d7d792e11b074142
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Thu Jul 5 16:55:27 2012 +0000
+
+    MR1: MAPREDUCE-4385. FairScheduler.maxTasksToAssign() should check for fairscheduler.assignmultiple.maps < TaskTracker.availableSlots (kkambatl via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1357737 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 7cd6014991d076dae0616c89885eaa19f338a9eb)
+    
+    Reason: Optimization
+    Ref: CDH-6723
+    Author: Karthik Kambatla
+    (cherry picked from commit 9455ef57b1f9bbf03bccf9dd269bdc5312beb841)
+
+commit 2983c73aa070ace587c05860f6c0889f2f31df78
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Wed Aug 22 12:01:24 2012 -0700
+
+    MR1: CDH-7412. Speedup counter name resolution during ResourceBundle lookup
+    	  Backport of MR-2855(trunk) and MR-4565(branch-1)
+    
+    Reason: Counter name resolution taking too long
+    Ref: CDH-7412
+    Author: Karthik Kambatla
+    (cherry picked from commit 0b8ca9cc91b73003ca580af08f4281239a92ba65)
+
+commit 2a85c2a23a5e75aee8d72f0bb9c619fa20787bfc
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Mon Jul 9 19:20:37 2012 +0000
+
+    MR1: MAPREDUCE-3993. Graceful handling of codec errors during decompression (kkambatl via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1359348 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit e821891bfea977da78ad86b4ccb08582aa8f7ddd)
+    
+    Reason: Codec errors affecting job execution
+    Ref: CDH-6721
+    Author: Karthik Kambatla
+    (cherry picked from commit 8a6dbc789008725abab0d946daacff34c43ec4f5)
+
+commit 250e3702a1d48bd949c762d650658a985c2bde81
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Thu Jul 5 16:29:26 2012 +0000
+
+    MR1: MAPREDUCE-4355. Add RunningJob.getJobStatus() (kkambatl via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1357724 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit e976bd7fe67a3ef7f8d62bddc826a195674369dd)
+    
+    Conflicts:
+    - src/test/org/apache/hadoop/mapred/TestNetworkedJob.java (from upstream change) not included as it required
+      several other changes.
+    
+    Reason: Customer (eBay) request
+    Ref: CDH-5730
+    Author: Karthik Kambatla
+    (cherry picked from commit 45d61ad391961f40f14c5483653d55293f1c551f)
+    (cherry picked from commit c65529811ace7f178e04291b3fc30a12b1caf881)
+
+commit 116cb9577dec4c811e93aad22531b13d2473c49c
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Thu Aug 16 11:06:50 2012 -0700
+
+    MR1: CDH-7130. Retain userlogs across JT/TT restarts
+    
+    Reason: Customer/cdh-user request
+    Author: Karthik Kambatla
+    Ref: CDH-7130
+    (cherry picked from commit 0f89f6eebea7c53657f10243d8c3fdccbea1fdb2)
+
+commit f5ec129087d34a3d2a51574b1a9e133714775157
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Wed Aug 15 23:15:09 2012 +0000
+
+    MR1: MAPREDUCE-4511. Add IFile readahead (ahmed via tucu)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1373672 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 1ca5374b8eec25feef38bd5f29308f8ef70f287a)
+    (cherry picked from commit b90a5c50074a0d75df708d4ce3d224676045bc95)
+
+commit 75767d0a75c7bcad8e5c77200b91cb5b82b798f4
+Author: Alejandro Abdelnur <tucu@apache.org>
+Date:   Mon Aug 13 21:56:31 2012 +0000
+
+    MR1: HADOOP-8581. add support for HTTPS to the web UIs. (tucu)
+    
+      Reason: This is a functionality backport as MR1 is based on JT/TT services
+      Author: Alejandro Abdelnur
+      Ref: CDH-6709
+    
+     git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-2@1372642 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit f7b3364af90e8312332c3cd01821d38deba52bcf)
+
+commit eff3540e7dbf4fd0a0d97143304a2b00f800f3b7
+Author: Tom White <tom@cloudera.com>
+Date:   Fri Aug 3 15:15:51 2012 -0400
+
+    MR1: MAPREDUCE-4487. Reduce job latency by removing hardcoded sleep statements.
+    
+    Reason: Performance
+    Author: Tom White
+    Ref: CDH-6839
+    (cherry picked from commit 6ff4d996113fdf291b6cc04aa5e07b9bdf700b7e)
+
+commit ea733be427552f9f488352f9c82f9a056bc7ec83
+Author: Harsh J <harsh@apache.org>
+Date:   Tue Jul 24 17:54:47 2012 +0000
+
+    MR1: MAPREDUCE-4415. Backport the Job.getInstance methods from MAPREDUCE-1505 to branch-1. Contributed by Harsh J. (harsh)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1365193 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 43aad7775f67d08e2967bd43c0343849c54f1a93)
+
+commit ae9ba02921ee3d08326ef3f18a271e65c2229c6c
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Mon Jul 30 08:44:08 2012 -0700
+
+    MR1: MAPREDUCE-4417. add support for encrypted shuffle (tucu)
+    
+      Reason: Amendment to testcase to initialize MapOutputServlet outside of the TastTracker
+      Author: Alejandro Abdelnur
+      Ref: CDH-7046
+    (cherry picked from commit b8545d306c2c08febbae199c82fad61607bc8c75)
+
+commit 40a24ef03ee57b9e1270769a7dd2e64c4eb2c8de
+Author: Tom White <tom@cloudera.com>
+Date:   Sat Jul 28 18:44:14 2012 -0400
+
+    MR1: CLOUDERA-BUILD. Fix TestNodeRefresh.
+    
+    Reason: failing tests
+    Author: Tom White
+    Ref: CDH-6343
+    (cherry picked from commit ee983f646bf16147aeffe922a86b68e5bf903ed2)
+
+commit 1d3be8ba33573fad0114e2562b068a985d651d0f
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Thu Jul 26 17:40:15 2012 -0700
+
+    MR1: MAPREDUCE-4417. add support for encrypted shuffle (tucu)
+    
+      Reason: customer request
+      Author: Alejandro Abdelnur
+      Ref: CDH-6647
+    (cherry picked from commit b0c79dedffcb142d550728a150fb48afe32b7b9f)
+
+commit caf95874736c28fe31ba519e5e9fa5300a5edd75
+Author: Tom White <tom@cloudera.com>
+Date:   Fri Jul 27 10:49:08 2012 -0400
+
+    MR1: MAPREDUCE-4463. JobTracker recovery fails with HDFS permission issue
+    
+    Reason: Bug fix
+    Author: Tom White
+    Ref: CDH-6870
+    (cherry picked from commit cf6210d65d92cda7a00bd5254ec06e3da583759d)
+
+commit 1d044fb99ccfbf36a41e88b53d7f7ad3467d8ce2
+Author: Tom White <tom@cloudera.com>
+Date:   Fri Jul 27 13:55:21 2012 -0400
+
+    MR1: CLOUDERA-BUILD. Fix failing tests due to incorrect @Ignore usage.
+    
+      Reason: failing tests
+      Author: Tom White
+      Ref: CDH-6343
+    (cherry picked from commit e574c573e22b6bf1924c3619f0156b2b7b1f0b8e)
+
+commit a1696fc68b71fc4ae51d7f78b07871cc2c646782
+Author: Andrew Bayer <andrew@cloudera.com>
+Date:   Tue Jul 24 18:07:09 2012 -0700
+
+    MR1: CDH-5800. Add reactorRepo to MR1 Ivy resolvers.
+    
+    With -DreactorRepo=$HOME/.m2/repository added to the ant call, the
+    local Maven repo will be checked first.
+    (cherry picked from commit 0d5af61d34788efbbc9c90f55622316fe36749ea)
+
+commit 4d9bc8c08c051a99b4063b69b78da7792fd1f286
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Mon Jul 23 08:54:54 2012 -0700
+
+    MR1: MAPREDUCE-4399. Performance regression in shuffle
+    
+    Reason: performance bugfix
+    Ref: CDH-6700
+    Author: Luke Lu
+    (cherry picked from commit 91f8a876538c1ad425ef6ed2433b1e1aa6b6291b)
+
+commit 699bed0478ec5304bdb27cfaa90387756d9899b7
+Author: Ahmed Radwan <ahmed@cloudera.com>
+Date:   Thu Jul 12 00:12:28 2012 -0700
+
+    MR1: MAPREDUCE-323. Re-factor layout of JobHistory files on HDFS
+    to improve operability.
+    
+    Description: Partial backport of MAPREDUCE-323 to change the
+    JobTracker History view to include "Job Submit Time" rather
+    than "Job Tracker Start Time".
+    
+    Reason: Bug
+    Author: Dick King
+    Ref: CDH-5822
+    (cherry picked from commit 14f33465358555a881c79cf649ffe778bbfb5de1)
+
+commit b0c762383d68251381ceb38d36c791217603b4f5
+Author: Tom White <tom@cloudera.com>
+Date:   Mon Jul 2 11:38:19 2012 -0400
+
+    MR1: MAPREDUCE-3837. Job tracker is not able to recover job in case of crash and after that no user can submit job.
+    
+    Reason: Bug fix
+    Author: Mayank Bansal
+    Ref: CDH-6386
+    (cherry picked from commit 47237119d402cedea71d54b52c4fa0f8e10c2d73)
+
+commit 36084a8ce6b968d54b371f9bcba45cb3fb8bc308
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Tue Jun 12 17:58:13 2012 -0700
+
+    MR1: MAPREDUCE-4195. With invalid queueName request param, jobqueue_details.jsp shows NPE (jira.shegalov via tucu)
+    
+      Reason: affects customer
+      Author: Gera Shegalov
+      Ref: CDH-4156
+    (cherry picked from commit f69a204b52e1a64473b60a456277ff8fe59d4bd9)
+
+commit 51185af757ff6eaf36a8ac505e6d96a1a8f6afb1
+Author: Harsh J <harsh@apache.org>
+Date:   Fri Apr 20 10:02:21 2012 +0000
+
+    MR1: MAPREDUCE-3674. Invoked with no queueName request param, the jobqueue_details.jsp injects a null queue name into schedulers. (harsh)
+    
+      Reason: affects customer
+      Author: Harsh J
+      Ref: CDH-4156
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1328292 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 9d6063bc504fb50fb8691d4e4d8e663bc4b671e7)
+
+commit 39b8af547826ce09e66e8254d9a2a15785cd3188
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Fri Jun 8 12:45:00 2012 -0700
+
+    MR1: MAPREDUCE-336. The logging level of the tasks should be configurable by the job
+    
+      Reason: customers request
+      Author: Arun C Murthy
+      Ref: CDH-3931
+    (cherry picked from commit 43932e7426475e598baacea638af8256e747f57f)
+
+commit e0a165b0ceb421cb46ad4d15f647b13f1f6adc06
+Author: Eli Collins <eli@cloudera.com>
+Date:   Fri Jun 1 15:27:44 2012 -0700
+
+    MR1: HADOOP-8466. hadoop-client POM incorrectly excludes avro.
+    
+    Reason: Bug
+    Author: Bruno Mahe
+    Ref: CDH-6141
+    (cherry picked from commit 3ff541af551480eceb9c75f34ebd55818bc3a259)
+
+commit f5d8747e6555db826fc195a92530ff3b1fa8ee6c
+Author: Jenkins slave <kitchen-build@cloudera.com>
+Date:   Fri Jun 1 08:35:29 2012 -0700
+
+    MR1: Preparing for 4.1.0 development.
+    (cherry picked from commit c3446fd24b1ae7e37d57d8a3f059f6990fe60b9a)
+
+commit 485522ddd157fe39aedfcdd257bcd7e83ae78fe3
+Author: Aaron T. Myers <atm@cloudera.com>
+Date:   Tue May 22 16:18:29 2012 -0700
+
+    MR1: MAPREDUCE-2839. MR Jobs fail on a secure cluster with viewfs
+    
+    Reason: Bug
+    Author: Siddharth Seth
+    Ref: CDH-5610
+    (cherry picked from commit 113f3b08b99bf9dfd647c3e6cd987870e3032d77)
+
+commit 5fd9ae5c20ad8b3e92346d9d7974c097c249029e
+Author: Roman Shaposhnik <rvs@cloudera.com>
+Date:   Fri May 18 13:42:21 2012 -0700
+
+    MR1: CDH-5919. MR1 'hadoop mrgroups' command not working
+    (cherry picked from commit f25d5ec50642220cf1cc39eb389330af26fed214)
+
+commit e0b5f8f3a0ded43d259cec42073ca4791e7e5df8
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Tue May 15 14:41:25 2012 -0700
+
+    MR1: CLOUDERA-BUILD. regression: unable to read har created with mr1
+    
+      Reason: HAR files created with MR1 tools had wrong version
+      Author: Alejandro Abdelnur
+      Ref: CDH-5839
+    (cherry picked from commit 3d541e54c10f4f61f82f4703487626bea2f61465)
+
+commit ccf8be1df5b0a28605cb2399ecb8c823f6a7ea44
+Author: Andrew Bayer <andrew@cloudera.com>
+Date:   Tue May 15 13:54:10 2012 -0700
+
+    MR1: Switching to 2.0.0-mr1-cdh4.0.0-SNAPSHOT
+    (cherry picked from commit 0f626adc632df3a74789083fd2668ad5144a1105)
+
+commit f25eea0755c3d7e8b1f0cf53b1866a5fb5e1994e
+Author: Andrew Bayer <andrew@cloudera.com>
+Date:   Thu May 10 12:55:38 2012 -0700
+
+    MR1: CDH-5555. Add -lcrypto to pipes examples compilation.
+    (cherry picked from commit 2cbdc1ce281a59c73e2d5e66706a7ffe6dfe8f2d)
+
+commit 27cc358bc85382f22b7d3d324cbd4cfd10994805
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Wed May 9 12:27:19 2012 -0700
+
+    MR1: CLOUDERA-BUILD. TestWebUIAuthorization.testWebUIAuthorizationForCommonServlets is failing
+    
+      Reason: testcases failures after HADOOP-8343 integration
+      Author: Alejandro Abdelnur
+      Ref: CDH-5691
+    (cherry picked from commit 476e30a90b1fe0d3fbb80a70205d2009a5c77108)
+
+commit 58829f6e19f633f7f61994b3a02bde94fddc53ce
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Wed May 9 11:53:52 2012 -0700
+
+    MR1: CLOUDERA-BUILD. Fix MR1 TestFileSystem to work with FS serviceloader
+    
+      Reason: test is failing due to FS serviceloader changes
+      Author: Alejandro Abdelnur
+      Ref: CDH-5738
+    (cherry picked from commit 84b7d29d71a58e14c980b287a5795026faa6c108)
+
+commit 54c89d0a19d62d75fc1a26c3b33d2f1af886cd7c
+Author: Andrew Bayer <andrew@cloudera.com>
+Date:   Tue May 8 08:51:48 2012 -0700
+
+    MR1: CLOUDERA-BUILD. Publish hadoop-streaming jar.
+    (cherry picked from commit 9b4c69238ff8a4c0720771d5cacbd305054c6309)
+
+commit adb91037cd841ba7e5023c41a0744351e4a16f00
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Mon May 7 20:12:00 2012 -0700
+
+    MR1: CLOUDERA-BUILD. Remove HAR from MR1 (we should use the one from MR2 common)
+    
+      Reason: HADOOP-7549 (FS serviceloader) breaks MR1
+      Author: Alejandro Abdelnur
+      Ref: CDH-5656
+    (cherry picked from commit 03ecc11ef492c6e11cd8bf5e738a0ddc63d3b4bb)
+
+commit 0a7faeb357f4ea97c8005d91081af35499569c33
+Author: Tom White <tom@cloudera.com>
+Date:   Mon May 7 14:16:45 2012 -0600
+
+    MR1: MAPREDUCE-4226. ConcurrentModificationException in FileSystemCounterGroup.
+    
+    Reason: Bug
+    Author: Tom White
+    Ref: CDH-5658
+    (cherry picked from commit a57d0143412f8e52d6debffcc0478c9f2ef4f9f5)
+
+commit 51f67b7ce8c86d747ab9ffb51ba39b685abb7968
+Author: Ahmed Radwan <ahmed@cloudera.com>
+Date:   Fri May 4 01:00:45 2012 -0700
+
+    MR1: MAPREDUCE-4129. Lots of unneeded counters log messages (Ahmed Radwan via bobby)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/trunk@1328106 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 8f262f448eff816cbda1054aa15f53bc958e6589)
+
+commit 511656b54c8f5c35b9ae0e7f3320c408c5b5b94e
+Author: Ahmed Radwan <ahmed@cloudera.com>
+Date:   Thu May 3 12:19:03 2012 -0700
+
+    MR1: MAPREDUCE-3827. Changed Counters to use ConcurrentSkipListMap for performance. Contributed by Vinod K V.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/trunk@1241711 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 2777e4e47d78371758e9b0ed90608010fabfc666)
+
+commit bb6ca208a9630f9ac0dc2f834af3a1db8ef8554f
+Author: Tom White <tom@cloudera.com>
+Date:   Thu May 3 11:30:02 2012 -0700
+
+    MR1: MAPREDUCE-3809. Tasks may take upto 3 seconds to exit after completion.
+    
+    Reason: Performance
+    Author: Siddharth Seth
+    Ref: CDH-5628
+    (cherry picked from commit 9e08a03acbe12c5a00aee9417d8e87c2ec4451ab)
+
+commit 53155e146c4105f51b0fd0b5b7bb55a851db280c
+Author: Roman Shaposhnik <rvs@cloudera.com>
+Date:   Fri Apr 27 13:04:56 2012 -0700
+
+    MR1: CLOUDERA-BUILD. mr1 pipes binaries should be executable (CDH-5154)
+    (cherry picked from commit c194a695da967e5b565c58a37c0a4ba660980113)
+
+commit 8073877c9f7e9ce5e9b6ae6cd04e8af6809e1b52
+Author: Tom White <tom@cloudera.com>
+Date:   Tue Apr 24 15:09:59 2012 -0700
+
+    MR1: MAPREDUCE-2450. Calls from running tasks to TaskTracker methods sometimes fail and incur a 60s timeout.
+    
+    Reason: Performance
+    Author: Rajesh Balamohan
+    Ref: CDH-5206
+    (cherry picked from commit 2f21b4b25af667475a46ca751186f16f214cac23)
+
+commit 043fc43be1dd4b0832a2d5b8286d72c03a8e4f72
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Sat Apr 21 17:05:41 2012 -0700
+
+    MR1: CDH-5434. Fix ability to submit MR1 job to secure HA HDFS
+    
+    Reason: Bug
+    Author: Todd Lipcon
+    (cherry picked from commit 3e9e1676568f2e68b81116325f9fa1551bbae571)
+
+commit 7ab97e51fc1e36d0b45f9aba34e1470233452572
+Author: hudson <hudson@cloudera.com>
+Date:   Sun Apr 15 14:38:22 2012 -0700
+
+    MR1: Updating for 4.0.0 development.
+    (cherry picked from commit df4115df245221eea3eac2976d90f71f4c1e7327)
+
+commit 47772296cd1b7234bdf2800e4dcd1e4176a93d57
+Author: Aaron T. Myers <atm@cloudera.com>
+Date:   Thu Apr 12 16:13:40 2012 -0700
+
+    MR1: HADOOP-8261. Har file system doesn't deal with FS URIs with a host but no port.
+    
+    Author: Aaron T. Myers
+    Reason: Bug
+    Ref: CDH-5166
+    (cherry picked from commit 9faaac6eb1ba91bd969fb3ac734e7466930f1b14)
+
+commit d30c312dd41ed2d26bd7e9cfe3b3a2d2d541f703
+Author: Eli Collins <eli@cloudera.com>
+Date:   Thu Apr 12 12:39:41 2012 -0700
+
+    MR1: HADOOP-8209. Add an option to relax the build version check.
+    
+    Changes the behavior of tasktrackers to only check for a version match (eg "0.20.2-cdh4b2") but ignore the other build fields
+    (revision, user, and source checksum) when checking for compatibility with jobtrackers. In previous releases tasktrackers refused
+    to connect to jobtrackers if their build version (version, revision, user, and source checksum) did not match. This behavior can
+    be restored by disabling hadoop.relaxed.worker.version.check in mapred-site.xml.
+    
+    Author: Eli Collins
+    Reason: Enable rolling upgrades of tasktrackers within an update
+    Ref: CDH-5027
+    (cherry picked from commit 08534abb1b8315be82324991f6da70c8a65fd6eb)
+
+commit f2e2691cd122a412f39f517b19381fd4850fcac7
+Author: Aaron T. Myers <atm@cloudera.com>
+Date:   Wed Mar 14 11:16:06 2012 -0700
+
+    MR1: The LTC should set supplementary groups in addition to euid and egid when switching users.
+    (cherry picked from commit 78ca997f549a89d60b39ae466f02a2797fa8003a)
+    (cherry picked from commit ca684ae7787052ca604204639e8338ad351f3587)
+    (cherry picked from commit 3252f8a419e730caf9e7b04bdf87611b52fb5732)
+
+commit 200d0e22c801e6526483ca999d984e71bd2255ac
+Author: Eli Collins <eli@cloudera.com>
+Date:   Wed Apr 4 00:16:46 2012 -0700
+
+    MR1: MAPREDUCE-4095. TestJobInProgress#testLocality uses a bogus topology. Contributed by Colin Patrick McCabe
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1@1308520 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit 19adbf52a152f372afe3ea84c31bd961f0cd0530)
+
+commit 71ffa3fbc5dc83584e870d853481d5fdc1d9ef01
+Author: Patrick Hunt <phunt@cloudera.com>
+Date:   Tue Apr 3 15:43:44 2012 +0000
+
+    MR1: MAPREDUCE-4012 Hadoop Job setup error leaves no useful info to users. (tgraves)
+    
+    Author: Thomas Graves
+    Reason: Bug
+    Ref: CDH-4854
+    (cherry picked from commit 4f7b3cdda537f7215d77e08acfd3e1e1990261ec)
+
+commit 3a6e8dc0ef0691b09fbe7ad26cb5ae08f85cb5fc
+Author: Patrick Hunt <phunt@cloudera.com>
+Date:   Tue May 10 20:18:44 2011 +0000
+
+    MR1: MAPREDUCE-2456. Log the reduce taskID and associated TaskTrackers with failed fetch notifications in the JobTracker log.
+    
+    Author: Jeffrey Naisbitt
+    Reason: Improvement
+    Ref: CDH-5019
+    (cherry picked from commit 62252037bae5d5f5fe228d1ed81274840e1b5281)
+
+commit 5b56a3dcd80805d1990135a99ec3f52387ab36a5
+Author: Roman Shaposhnik <rvs@cloudera.com>
+Date:   Fri Mar 30 09:48:08 2012 -0700
+
+    MR1: CLOUDERA-BUILD. add pipes (and other c++ libs) to the cdh4 build (CDH-5075)
+    (cherry picked from commit 5081a645c0f9572d645e6a8a241508d6ae6bfcad)
+
+commit c0202f4157f4c07dd102f809665a5dc9310c9a32
+Author: Roman Shaposhnik <rvs@cloudera.com>
+Date:   Tue Mar 27 12:03:39 2012 -0700
+
+    MR1: CLOUDERA-BUILD. Seed the classpath of MR1 with MR2 value (when available)
+    (cherry picked from commit b435e84dc3adadb7f8ccdd9281643a151760b5c6)
+
+commit 2c8098e393fe75656efa5b1b27a7d0f09d9dbb0f
+Author: Tom White <tom@cloudera.com>
+Date:   Mon Mar 19 14:04:13 2012 -0700
+
+    MR1: CDH-4334. Backport MAPREDUCE-3583 (ProcfsBasedProcessTree#constructProcessInfo() may throw NumberFormatException)
+    (cherry picked from commit a60c067ac3ad926c95aec71c6b64cf23d8d0be2d)
+
+commit 0822bf4dda951ef1c1a27de13039036bfe88912e
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Mon Mar 26 12:39:43 2012 -0700
+
+    MR1: Amend MAPREDUCE-3289. Fix TaskTracker fadvise support to only readahead a chunk at a time
+    
+    Reason: previous implementation could cause reduce fetch timeouts when some map output partitions are very large
+    Author: Todd Lipcon
+    Ref: CDH-5020
+    (cherry picked from commit a16470964965c4ddbcd40dbf1466b875f226609f)
+
+commit 2aea221ae1166c9f4d855844b2a4652d08060ac0
+Author: Tom White <tom@cloudera.com>
+Date:   Tue Mar 13 13:57:13 2012 -0700
+
+    MR1: MAPREDUCE-1221. Kill tasks on a node if the free physical memory on that machine falls below a configured threshold
+    
+    Reason: Customer request
+    Author: Scott Chen, Tom White
+    Ref: CDH-3828
+    (cherry picked from commit d4a40e763505133e7236f2244b279c87e81992af)
+
+commit 5608460c3a943b8a3c154610909fd7145a6c8f1c
+Author: Ahmed Radwan <ahmed@cloudera.com>
+Date:   Wed Mar 21 17:30:36 2012 -0700
+
+    MR1: MAPREDUCE-1740. NPE in getMatchingLevelForNodes when node locations are
+    variable depth.
+    
+    Author: Ahmed Radwan
+    Reason: Bug
+    Ref: CDH-4278
+    (cherry picked from commit 33d4c86eba5b4149b863ee3c60ad238fe69c560e)
+
+commit 7252f97c3e1bd09c8f79be34a287b51ca9939457
+Author: Andrew Bayer <andrew@cloudera.com>
+Date:   Tue Mar 20 16:13:41 2012 -0700
+
+    MR1: CLOUDERA-BUILD. Publish MR1 hadoop-tools jar.
+    (cherry picked from commit 6fa7d3df48cec1d0e5a594ca2c0b425f33f675f4)
+
+commit e190adce41e3ea1e72401bf62f8104ac15a26227
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Mon Mar 19 20:23:27 2012 -0700
+
+    MR1: MAPREDUCE-4036 Streaming TestUlimit fails on CentOS 6 (MR1) (tucu)
+    
+      Reason: CentOS 6 JVM has higher minimum memory requirements
+      Author: Alejandro Abdelnur
+      Ref: CDH-4893
+    (cherry picked from commit fd4ca689cb0711f1b4c37405e0086f7e1bd5471d)
+
+commit b61edf16cea1e139ed2ef9bd6fda7afd94d4526c
+Author: Ahmed Radwan <ahmed@cloudera.com>
+Date:   Mon Mar 19 17:49:28 2012 -0700
+
+    MR1: CLOUDERA BUILD. hadoop-core-0.23.0-mr1 JAR has bogus o.a.h.mapreduce.Cluster
+    
+    Reason: Bug
+    Author: Ahmed Radwan
+    Ref: CDH-4777
+    (cherry picked from commit b16d68c2e576b42da74213a273bf495b5f5d0b56)
+
+commit 2c9fedb9256a8a1f19a65d284469acb86e3a0249
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Mon Feb 6 10:40:32 2012 -0800
+
+    MR1: MAPREDUCE-3727 jobtoken location property in jobconf refers to wrong jobtoken file.
+    
+      This backport is backporting also a portion of HADOOP-7001 (Configuration#unset method)
+    
+      Reason: Oozie Hive actions are impacted by this bug
+      Author: Alejandro Abdelnur
+      Ref: CDH-4232
+    (cherry picked from commit 58cc8c9b3d8699bf6d866689009c140dc5cbd82a)
+
+commit e03da3e31002d16c18a377bea39a94ff233b3e24
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Fri Mar 16 08:27:21 2012 -0700
+
+    MR1: MAPREDUCE-4010.  TestWritableJobConf fails on trunk (tucu via bobby)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/trunk@1301551 13f79535-47bb-0310-9956-ffa450edef68
+    
+      Reason: fixing testcases failures after HADOOP-8167
+      Author: Alejandro Abdelnur
+      Ref: CDH-4872
+    (cherry picked from commit dfc2b5cc0dee1b9dd24dc4be9083e374309fb735)
+
+commit b26fce4b32091b81408c3093f47b157e88406d48
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Thu Mar 15 17:18:18 2012 -0700
+
+    MR1: CLOUDERA BUILD. mr1 test failures "unknown protocol" on golden after 23.3 refresh
+    
+      Reason: GetUserMappingsProtocol from 0.23.3 is PB based
+      Author: Alejandro Abdelnur
+      Ref: CDH-4833
+    (cherry picked from commit a744687492f8f078f107b64dc112706f51d425b6)
+
+commit 3949ea69d453bcee80380751a40d42d2296b4384
+Author: Roman Shaposhnik <rvs@cloudera.com>
+Date:   Wed Mar 14 17:21:44 2012 -0700
+
+    MR1: CLOUDERA-BUILD. Making hadoop-client assembly for MR1
+    (cherry picked from commit f86973ce27527a62dee90701c6ac706edfd322bc)
+
+commit affb0b14ab8811329a2a2493b5831ab426d9d9c8
+Author: Andrew Bayer <andrew@cloudera.com>
+Date:   Tue Mar 13 08:41:13 2012 -0700
+
+    MR1: CDH-4642. Ensure MR1 uses the same Avro version as other components.
+    (cherry picked from commit 1ea4b03b3fbe1b923b2e2a4fd59d35b855de0ad4)
+
+commit 00bea24066411124fdaa6936189ca0faf7ed247a
+Author: Tom White <tom@cloudera.com>
+Date:   Tue Dec 27 14:46:52 2011 -0800
+
+    MR1: MAPREDUCE-3607. Port missing new API mapreduce lib classes to 1.x.
+    
+    Reason: Compatibility
+    Author: Tom White
+    Ref: CDH-4006
+    (cherry picked from commit 5a9620ba208f265043e72dff8daa245ffdb11754)
+
+commit 3c22c720ec09d39d381e3410fa01caf5765122d8
+Author: Harsh J <harsh@cloudera.com>
+Date:   Wed Mar 14 03:04:43 2012 +0530
+
+    MR1: MAPREDUCE-4001. Improve MAPREDUCE-3789's fix logic by looking at job's slot demands instead.
+    
+    Reason: Customer request
+    Author: Harsh J
+    Ref: CDH-4276
+    (cherry picked from commit 99a503c96beae66fa4a153a505dd9f2dae76ad64)
+
+commit 4d3318c26d6a0af426bb60d8647aebca545c5d2c
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Mon Mar 12 12:54:18 2012 -0700
+
+    MR1: MAPREDUCE-3974 TestSubmitJob in MR1 tests doesn't compile after HDFS-1623 merge (atm)
+    
+      Reason: backport required for HDFS HA
+      Author: Alejandro Abdelnur
+      Ref: CDH-4821
+    (cherry picked from commit d277042fcbf67f02486cff177b91f8fe19722e12)
+
+commit 84bc6951f3ab553626037c21bbdd7341aed496c1
+Author: Roman Shaposhnik <rvs@cloudera.com>
+Date:   Mon Mar 12 11:12:03 2012 -0700
+
+    MR1: CLOUDERA-BUILD. Updating versions to 0.23.1.
+    (cherry picked from commit 76d4e7b975424aab9c87bfd494a84c0522371fd1)
+
+commit 609bc2817dc8674e329eddd66792b6c5734ba99a
+Author: Harsh J <harsh@cloudera.com>
+Date:   Sun Mar 11 22:44:46 2012 +0530
+
+    MR1: MAPREDUCE-1109. ConcurrentModificationException in jobtracker.jsp
+    
+    Reason: Customer request
+    Author: Harsh J
+    Ref: CDH-4527
+    (cherry picked from commit 48f7d651a811c149b6b557ff1f6931b664aa076a)
+
+commit 37e89908b61fe1d23e31f00bf05d69d798fdf64e
+Author: Tom White <tom@cloudera.com>
+Date:   Mon Mar 5 17:06:13 2012 -0800
+
+    MR1: MAPREDUCE-157. Add configuration to control maximum age of job history files (mapreduce.jobhistory.max-age-ms).
+    
+    Reason: Improvement
+    Author: Jothi Padmanabhan and Tom White
+    Ref: CDH-3641
+    (cherry picked from commit 6aef3013f39c204f14a369fe4b8bbcecda2d13b4)
+
+commit 1845f138301f806827a2ebbbf74b80b7c2de7126
+Author: Tom White <tom@cloudera.com>
+Date:   Tue Mar 6 14:25:11 2012 -0800
+
+    MR1: MAPREDUCE-3997. jobhistory.jsp cuts off the job name at the first underscore of the job name
+    
+    Reason: Bug (customer request)
+    Author: Tom White
+    Ref: CDH-4408
+    (cherry picked from commit 46e9bb224ba4224e71044db2af61b12915033042)
+
+commit abe655b9f0f0146c0706cfb9461ef50b5a10ebc2
+Author: Owen O'Malley <omalley@apache.org>
+Date:   Fri Mar 4 04:50:13 2011 +0000
+
+    MR1: commit 98d8043ef96dd9a67e23852b5e5caf8f0a4589db
+    Author: Krishna Ramachandran <ramach@yahoo-inc.com>
+    Date:   Thu Oct 21 12:21:50 2010 -0700
+    
+        . Delete PrintWriter using iterator to fix
+            java.util.ConcurrentModificationException (dking)
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-0.20-security-patches@1077739 13f79535-47bb-0310-9956-ffa450edef68
+    (cherry picked from commit dd9742fbca934eaee28c8e8f43e21c99a4b9b51f)
+
+commit 253950e80031b22e1a7aabdebd461444b6379965
+Author: Tom White <tom@cloudera.com>
+Date:   Fri Feb 24 13:02:00 2012 -0800
+
+    MR1: MAPREDUCE-3697. Hadoop Counters API limits Oozie's working across different hadoop versions
+    
+    Reason: Improve API compatibility
+    Author: Mahadev Konar
+    Ref: CDH-4592
+    (cherry picked from commit 8298385e11c6bfa3dbb48f1adc89336b317c40b1)
+
+commit c28da47dc6fece2b1cee25c1eab3bb48e5833f64
+Author: Andrew Bayer <andrew@cloudera.com>
+Date:   Thu Feb 23 16:26:38 2012 -0800
+
+    MR1: CDH-4480 - removing redundant Ivy entry for hadoop-commons.
+    (cherry picked from commit ecfe5d2eb245233ba3e3e9d2a737fe7f4db69c04)
+
+commit 9698b7f8e885b082ecdb9b9374b345fc276ce5db
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Wed Feb 15 13:16:16 2012 -0800
+
+    MR1: MAPREDUCE-3789 CapacityTaskScheduler may perform unnecessary reservations in heterogenous tracker environments
+    
+      Reason: Customer impacted by this bug
+      Author: Harsh Chouraria
+      Ref: CDH-4276
+    (cherry picked from commit 0214490e71940555db496b090c63c60b31475e03)
+
+commit 3f593c69a385805acf9d121c190333bf7cc7d8b6
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Tue Feb 14 16:32:16 2012 -0800
+
+    MR1: CLOUDERA BUILD. hadoop-streaming has wrong version
+    
+      Author: Alejandro Abdelnur
+      Ref: CDH-4503
+    (cherry picked from commit f16daf3776c27023ef757aa1bacf244475e4cf0c)
+
+commit 7f815d74f399228014edb976eb376e7e7c8e1d09
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Tue Feb 14 15:45:41 2012 -0800
+
+    MR1: CLOUDERA BUILD. Create hadoop-client and hadoop-minicluster artifacts for downstream projects
+    
+      Reason: backport for easier build/test for downstream projects
+      Author: Alejandro Abdelnur
+      Ref: CDH-4502
+    (cherry picked from commit 31fd553e059c1a10e7e561f574cb2b7f991d9d65)
+
+commit f057a21646906f247ab3773e7909b7665d6aa162
+Author: Andrew Bayer <andrew@cloudera.com>
+Date:   Mon Feb 6 20:05:28 2012 -0800
+
+    MR1: CLOUDERA-BUILD. Fixing handling of test artifact dependencies.
+    (cherry picked from commit 32b7f40e5fbe842fb0c029ff694bcd3effaef835)
+
+commit 01f77a217e0986ae4d69398c1bc6a8ee1d1971b8
+Author: Andrew Bayer <andrew@cloudera.com>
+Date:   Mon Feb 6 12:05:36 2012 -0800
+
+    MR1: Prepping for CDH4b2 development.
+    (cherry picked from commit 196268f783ccfb27ea359e34cbf2ee484848ca47)
+
+commit 193913f82d0145a8af77523f8313a5822d3fd198
+Author: Roman Shaposhnik <rvs@cloudera.com>
+Date:   Mon Feb 6 10:37:41 2012 -0800
+
+    MR1: CLOUDERA-BUILD. Should not be able to start HDFS from the MR1 tarball (CDH-4376)
+    (cherry picked from commit 688e5598d097b1076a16427eee89d9f2f9af4cf1)
+
+commit d9b4018da9236859c884b8b2bf6ee889718e5f5a
+Author: Tom White <tom@cloudera.com>
+Date:   Thu Feb 2 13:48:35 2012 -0800
+
+    MR1: MAPREDUCE-3639. TokenCache likely broken for FileSystems which don't issue delegation tokens
+    
+    Reason: Bug
+    Author: Tom White
+    Ref: CDH-4361
+    (cherry picked from commit fc5592bb4b7663e4f154cb5d1d40c6f585daf82d)
+
+commit 5472bf392d22add9318f72e22cd68793ceb8ebda
+Author: Tom White <tom@cloudera.com>
+Date:   Tue Jan 31 15:27:14 2012 -0800
+
+    MR1: MAPREDUCE-3749. ConcurrentModificationException in counter groups
+    
+    Reason: Bug
+    Author: Tom White
+    Ref: CDH-4301
+    (cherry picked from commit 3a90014a1c38f38998b2dab9810704f4e5621699)
+
+commit ad6b980e6797ae6f06e1ba7eba574f9710f0adc9
+Author: Tom White <tom@cloudera.com>
+Date:   Fri Jan 27 10:01:40 2012 -0800
+
+    MR1: CLOUDERA-BUILD. Add missing constructors that take a TaskType in TaskAttemptID and TaskID.
+    (cherry picked from commit b71fd7fbe1f7bec5c526538d0589e88f09d762aa)
+
+commit 85fca85717eeee45ff6cdfacffcecaf035d7bd21
+Author: Tom White <tom@cloudera.com>
+Date:   Wed Jan 25 11:53:26 2012 -0800
+
+    MR1: MAPREDUCE-3138. Allow for applications to deal with MAPREDUCE-954
+    
+    Author: Owen O'Malley
+    Reason: Support 0.23 API in MR1
+    Ref: CDH-4264
+    (cherry picked from commit e880fb796f8178e768901c7c4bd073a80061a785)
+
+commit 56355921ba6b696a7b9e9d4b95a63f1cdb03f7f5
+Author: Tom White <tom@cloudera.com>
+Date:   Wed Jan 25 11:00:42 2012 -0800
+
+    MR1: MAPREDUCE-3563. LocalJobRunner doesn't handle Jobs using o.a.h.mapreduce.OutputCommitter
+    
+    Author: Arun C Murthy
+    Reason: Support 0.23 API in MR1
+    Ref: CDH-4263
+    (cherry picked from commit 1db539bdb9533ea46797c8dc5f294e29205473a3)
+
+commit 8341a0e2e2f7b36b7a0e1c1ceb8a60540d57a5f7
+Author: Tom White <tom@cloudera.com>
+Date:   Tue Jan 24 12:05:51 2012 -0800
+
+    MR1: CLOUDERA-BUILD. Exclude Gridmix unit tests.
+    (cherry picked from commit 9137b007b774beb1b6df2bbde2b626c7fcb9d508)
+
+commit 99a5cbd4d2616ea0ca625d1976e449acfe1db13a
+Author: Tom White <tom@cloudera.com>
+Date:   Mon Jan 23 11:28:52 2012 -0800
+
+    MR1: CLOUDERA-BUILD. Fix TestAuditLogger, TestSubmitJob and TestWebUIAuthorization.
+    (cherry picked from commit 9f51962c039fb0666faeda951ef973c8f683f1ac)
+
+commit d2730516df13d3b5cff48df9fcebce59f3db1d4d
+Author: Tom White <tom@cloudera.com>
+Date:   Fri Jan 13 14:10:30 2012 -0800
+
+    MR1: CLOUDERA-BUILD. Fix TestMultipleCachefiles, TestSymLink, and TestStreamingStatus.
+    
+    Author: Tom White
+    Ref: CDH-4128
+    (cherry picked from commit 51e559788ed77890efe24cfd764fc8fc1715c7b9)
+
+commit 7cb8ac3130e264cecf668ab36b8fa35b998daa7c
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Wed Jan 11 11:42:31 2012 -0800
+
+    MR1: CLOUDERA BUILD. MR1 contrib testcase are not compiling
+    
+      Author: Alejandro Abdelnur
+      Ref: CDH-4082
+    (cherry picked from commit 2f6d7f7f1e9deecd0ed3b031bb4b8623d0d9a4c0)
+
+commit c50f42f0103ee306fed8f526517b296993e4fbb7
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Mon Jan 9 14:35:00 2012 -0800
+
+    MR1: CLOUDERA BUILD. fixing MR1 TestSubmitJob failure.
+    
+      Author: Alejandro Abdelnur
+      Ref: CDH-4066
+    (cherry picked from commit 7d9dd4fb5ebd8a0465c0558e3678935a77fc9409)
+
+commit 2832d7efdc1890d4ed7520be242213d2c21c6fc3
+Author: Alejandro Abdelnur <tucu@cloudera.com>
+Date:   Mon Jan 9 13:46:32 2012 -0800
+
+    MR1: CLOUDERA BUILD. Fixing MR1 testcases failures.
+    
+      Reason: Due to changes in hadoop-common 0.23.
+      Author: Alejandro Abdelnur
+      Ref: CDH-3997
+    (cherry picked from commit 6e86c40ccf9e2cc62d1b8c730ddaa68cb597c5f6)
+
+commit 93a2bcc10eef6415ef861fdde20ae8c1a034d574
+Author: Tom White <tom@cloudera.com>
+Date:   Fri Dec 30 13:28:40 2011 -0800
+
+    MR1: CLOUDERA-BUILD. Fix TestMapReduceLocal, TestJobTrackerXmlJsp, TestMRMultipleOutputs, and remove failing test TestFileSystem.testCommandFormat  since the code has changed and the test is no longer appropriate.
+    (cherry picked from commit af3cf26c636b4a3728aff9ad8011f2213583e3c6)
+
+commit 193a0478802a51fb8bd0779e131304ea05aaed5a
+Author: Roman Shaposhnik <rvs@cloudera.com>
+Date:   Thu Dec 29 14:44:19 2011 -0800
+
+    MR1: CLOUDERA-BUILD. changing MR1 version to 0.23.0-mr1-cdh4b1-SNAPSHOT
+    (cherry picked from commit f3311eca9a23d1e76a2f09d590d04f2311754691)
+
+commit 17474102da53924989c1ec71f9117410bb027350
+Author: Andrew Bayer <andrew@cloudera.com>
+Date:   Wed Dec 28 13:24:42 2011 -0800
+
+    MR1: Updating for cdh4b1.
+    (cherry picked from commit da2315f986efc8e3bc6cbef5c6f07e79f26c2fb8)
+
+commit 34399ca127a0de11ae82a47313293db8a0d549c6
+Author: Tom White <tom@cloudera.com>
+Date:   Wed Dec 28 10:50:26 2011 -0800
+
+    MR1: CLOUDERA-BUILD. Support TaskID.getTaskType().
+    (cherry picked from commit 284575b673cbf7951748b2a74f07a984470ba1bd)
+
+commit 34932779fb901c98cf7534be34c8f35064135d07
+Author: Andrew Bayer <andrew@cloudera.com>
+Date:   Thu Dec 22 11:49:46 2011 -0800
+
+    MR1: Excluding commons-daemon from dependencies due to bad POM.
+    (cherry picked from commit cff4754af8cc0754b932ea35fdb3acb90796ff3c)
+
+commit 42e876a960b520483489f3e4302bc1d68dc251cc
+Author: Andrew Bayer <andrew@cloudera.com>
+Date:   Thu Dec 22 11:27:05 2011 -0800
+
+    MR1: Handle commons-daemon POM inconsistency.
+    (cherry picked from commit eccce0e8d4981646a61245bb0aa6652df842f73d)
+
+commit afcc496451c63bc226f993b22ee0cca10665d809
+Author: Andrew Bayer <andrew@cloudera.com>
+Date:   Thu Dec 22 11:13:58 2011 -0800
+
+    MR1: CLOUDERA-BUILD. Further tweaking Ivy resolver logic for MR1.
+    (cherry picked from commit 4daeaa99b1c0733e9913740ea7017091ada9b074)
+
+commit a8756cc29a06bc226ed46c3f1f539997dfd045db
+Author: Andrew Bayer <andrew@cloudera.com>
+Date:   Thu Dec 22 10:58:29 2011 -0800
+
+    MR1: CLOUDERA-BUILD. Adding cloudera-snapshots to ivy resolvers.
+    (cherry picked from commit 49e48f1c07497bc3a40c045c89b89d73a94656b1)
+
+commit 2ea73edd46958492b8454ee58a27393c9a1d5d23
+Author: Roman Shaposhnik <rvs@cloudera.com>
+Date:   Wed Dec 21 21:35:39 2011 -0800
+
+    MR1: CLOUDERA-BUILD. Hooking up to the correct top-level pom and starting to use version properties for CDH4
+    (cherry picked from commit 9f663f7a1f37f37573e4bee2dd27bae740198e2a)
+
+commit 5fa2ed5b63759556d2e2d1e83e865f583f42fc52
+Author: Roman Shaposhnik <rvs@cloudera.com>
+Date:   Wed Dec 21 21:06:28 2011 -0800
+
+    MR1: CLOUDERA-BUILD. Disabling a Counter test
+    (cherry picked from commit 14ba997305d9a8d6c762515a75171b9ddaed1ef5)
+
+commit 0a07b25b17a3c77fbb55636f6c911760d740f5e7
+Author: Andrew Bayer <andrew@cloudera.com>
+Date:   Tue Dec 20 15:17:52 2011 -0800
+
+    MR1: CLOUDERA-BUILD. Switching functional POM versioning.
+    (cherry picked from commit 659356f0a1de51c5668fa352e378823213067d5a)
+
+commit 959c1c2f710b2bfee695d3baa9941bc0dfc6ae5b
+Author: Roman Shaposhnik <rvs@cloudera.com>
+Date:   Fri Dec 16 15:07:15 2011 -0800
+
+    MR1: CLOUDERA-BUILD. Disabling missing artifacts in yet another profile
+    (cherry picked from commit d0c2cf59e74144e0f0cd81b85410b442e4ad11d7)
+
+commit 1243fd250890f2c5031d66ffdcf090475adcc67d
+Author: Roman Shaposhnik <rvs@cloudera.com>
+Date:   Thu Dec 15 19:44:44 2011 -0800
+
+    MR1: CLOUDERA-BUILD. Making MR1 deployable to Maven repo
+    (cherry picked from commit 53c40dbd4b0be9d175c32f21bbc6aa0d968eb019)
+
+commit 4244e3b9dfed6e47121a8399254f3f7635bc66ce
+Author: Roman Shaposhnik <rvs@cloudera.com>
+Date:   Wed Dec 14 14:43:23 2011 -0800
+
+    MR1: CLOUDERA-BUILD. Packaging work
+    (cherry picked from commit 392b6c41afe19d26fc5fde3e6f045010f38bf122)
+
+commit 4f9f7d2048fef8c2c1a552cd90a1397925bfd007
+Author: Tom White <tom@cloudera.com>
+Date:   Tue Dec 20 13:49:53 2011 -0800
+
+    MR1: MAPREDUCE-2531. org.apache.hadoop.mapred.jobcontrol.getAssignedJobID throw class cast exception.
+    
+    Author: Robert Joseph Evans
+    Reason: Support 0.23 API in MR1
+    Ref: CDH-3970
+    (cherry picked from commit afcb7adc674c09535975552a5653d3ce3a56ec97)
+
+commit 3175ae6dedcc6528553d15ca5f17bd915036c31e
+Author: Tom White <tom@cloudera.com>
+Date:   Tue Dec 20 12:32:22 2011 -0800
+
+    MR1: MAPREDUCE-368. Change org.apache.hadoop.mapred.jobcontrol to use new api
+    
+    Author: Amareshwari Sriramadasu
+    Reason: Support 0.23 API in MR1
+    Ref: CDH-3970
+    (cherry picked from commit 7871406e3f30ef1668fb483f6e13b292142f5fc4)
+
+commit 0ddc369cc4568758bbbab286a819e53340680c08
+Author: Tom White <tom@cloudera.com>
+Date:   Mon Dec 19 10:07:46 2011 -0800
+
+    MR1: CLOUDERA-BUILD. Disable MRUnit build.
+    (cherry picked from commit 4e4d666d0bda42459076f77e5776df9f8d484aba)
+
+commit cdfd406f3dcd57cd179686092a8f8d911251eb31
+Author: Tom White <tom@cloudera.com>
+Date:   Fri Dec 16 11:25:15 2011 -0800
+
+    MR1: MAPREDUCE-3542. Support FileSystemCounter legacy counter group name for compatibility.
+    
+    Author: Tom White
+    Reason: Support 0.23 API in MR1
+    Ref: CDH-3861
+    (cherry picked from commit 7c3dfff688ae6f95dcd94e1d421a4b9108c39e58)
+
+commit 7c74beeaeafd51854fc329efe5c6f615cf869c00
+Author: Tom White <tom@cloudera.com>
+Date:   Fri Dec 16 11:20:04 2011 -0800
+
+    MR1: MAPREDUCE-3433. Finding counters by legacy group name returns empty counters.
+    
+    Author: Tom White
+    Reason: Support 0.23 API in MR1
+    Ref: CDH-3861
+    (cherry picked from commit 9f06f4d529162ee51cd121e1604279dfbd15fc15)
+
+commit 8f5c919a2022606431f33c6f2c88a8d8391ddd62
+Author: Tom White <tom@cloudera.com>
+Date:   Thu Dec 15 16:05:36 2011 -0800
+
+    MR1: CLOUDERA_BUILD. Revert "MAPREDUCE-1943. Implement limits on per-job JobConf, Counters, StatusReport, Split-Sizes"
+    
+    This reverts commit e3f8dc3926d119ce3b765325114e5b8ada01120f.
+    (cherry picked from commit 88d6e697320762341664649e50040a906680772a)
+
+commit fe65779f8aa6df79f1458d176d1437f0b74d8037
+Author: Tom White <tom@cloudera.com>
+Date:   Thu Dec 15 15:58:46 2011 -0800
+
+    MR1: MAPREDUCE-901. Move Framework Counters into a TaskMetric structure.
+    
+    Author: Luke Lu
+    Reason: Support 0.23 API in MR1
+    Ref: CDH-3861
+    (cherry picked from commit a8a51561879db52d43341d6d8014bcad8d628f0a)
+
+commit 88990ad6c48e6170bf727d3916768b080b3dbd15
+Author: Tom White <tom@cloudera.com>
+Date:   Mon Dec 12 16:15:12 2011 -0800
+
+    MR1: MAPREDUCE-954. The new interface's Context objects should be interfaces.
+    
+    Author: Arun C Murthy
+    Reason: Support 0.23 API in MR1
+    Ref: CDH-3861
+    (cherry picked from commit 23dffbf944a99a007779cdd161789a4462b2e935)
+
+commit 836852ebab6eecdb4ced83bd345a8a795762dc7e
+Author: Tom White <tom@cloudera.com>
+Date:   Mon Dec 12 13:35:52 2011 -0800
+
+    MR1: MAPREDUCE-2455. Remove deprecated JobTracker.State in favour of JobTrackerStatus.
+    
+    Author: Tom White
+    Reason: Support 0.23 API in MR1
+    Ref: CDH-3861
+    (cherry picked from commit 07cf8b4e89cb26cf2f53be7b4e46e613afff5c13)
+
+commit f6d2c9539c00cf14611945fb3e62c717518ea60c
+Author: Tom White <tom@cloudera.com>
+Date:   Fri Dec 9 14:59:00 2011 -0800
+
+    MR1: CLOUDERA-BUILD. Re-instate mvn-install to install files locally for testing.
+    (cherry picked from commit 262ec1f63da018ff710400e152a7663c69e1e9d2)
+
+commit 79d22a85c10e68e0f517097a5108817f0b0da830
+Author: Tom White <tom@cloudera.com>
+Date:   Mon Dec 5 09:21:37 2011 -0800
+
+    MR1: CLOUDERA-BUILD. Remove usage of ChecksumDistributedFileSystem in tests.
+    (cherry picked from commit 62368b3479b8687406d9dc3021066eab499d322d)
+
+commit b897877dd847d0b891cd8710c28adb8bd04d5941
+Author: Tom White <tom@cloudera.com>
+Date:   Fri Dec 2 17:46:52 2011 -0800
+
+    MR1: CLOUDERA-BUILD. Remove smoke tests.
+    (cherry picked from commit 89d156069c0e8d57a868215d8184519666f53b05)
+
+commit 20b6550b8737a5e0db6ed064fd3c95b6aefa367e
+Author: Tom White <tom@cloudera.com>
+Date:   Fri Dec 2 17:19:15 2011 -0800
+
+    MR1: MAPREDUCE-895. FileSystem::ListStatus will now throw FileNotFoundException, MapRed needs updated.
+    
+    Author: Jakob Homan.
+    Reason: Support 0.23 API in MR1
+    Ref: CDH-3861
+    (cherry picked from commit 02aeb18f4474e422f6faa55e9b00e69200cd76e8)
+
+commit 84f18625c2435d63e2eb192b00b6d6e44848e847
+Author: Tom White <tom@cloudera.com>
+Date:   Fri Dec 2 16:48:03 2011 -0800
+
+    MR1: Fix to allow tar build.
+    (cherry picked from commit 14b4948fdd4efedfd5e21aace4a48aad52352a69)
+
+commit f462d69afac642b0d0a8b1aac9b85a83911af928
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Fri Dec 2 15:27:56 2011 -0800
+
+    MR1: Code changes necessary for compatibility with 0.23 common/HDFS APIs
+    (cherry picked from commit a13f4bc83c36f9bb332beba78b6544408bc85ff6)
+
+commit e72b79cfbdd49aac13f3bec697751e9bc63e7fb5
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Fri Dec 2 15:25:44 2011 -0800
+
+    MR1: Add files into mapred tree that are part of Common/HDFS 0.20 but no longer in 0.23.
+    (cherry picked from commit 3cd60ead34dc0e52894bae137df7eac52cb7dd94)
+
+commit e2077e9ac2dd755fcb1a5b01fa0308c0accac237
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Fri Dec 2 15:24:30 2011 -0800
+
+    MR1: Delete HDFS and Common, HDFSProxy contrib, and non-MR test cases
+    (cherry picked from commit ff4d612f07a97bd14a1fa71ebc9582dae87250bf)
+
+commit a5c13139c839296baf6ba54a240e6454e8eb3dc1
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Fri Dec 2 15:23:42 2011 -0800
+
+    MR1: Add ivy templates. Are these actually used? Maybe not in CDH build. TODO
+    (cherry picked from commit 4c674eba990e2dbb28fdb14f5c59a98fb321a349)
+
+commit 0c58c595e26ee661f19a26716616f539e53b39b1
+Author: Todd Lipcon <todd@cloudera.com>
+Date:   Fri Dec 2 15:10:50 2011 -0800
+
+    MR1: Build changes
+    (cherry picked from commit 806d2ea5898a3e92b5c7926a5f62e629c2633a12)
+
+commit 66572d6b23dba359a9250b4b5825e2074d252277
+Author: Douglass Cutting <cutting@apache.org>
+Date:   Mon Jan 30 23:06:34 2006 +0000
+
+    MR1: CDH3u3 base for MR1 implementation
+    (cherry picked from commit 486977ed9fe414d619d8b0964c8bf3cf5c3e16f5)
+
+commit f7926616dbb08914c98fcc17adfd7d9b7bab48d3
+Author: Karthik Kambatla <kasha@cloudera.com>
+Date:   Thu Jun 13 19:38:40 2013 -0700
+
+    CLOUDERA-BUILD. Revert "HADOOP-8912. Merging changes 1397437 and 1397438 from trunk"
+    
+    This reverts commit 59e991d12389b1a171960bd8c402ba0f89dfa1a0.
+    
+    Conflicts:
+    	hadoop-common-project/hadoop-common/CHANGES.txt
+
+commit b028896efdb232d6f03e5ca99e9294f4532d284b
+Author: Sandy Ryza <sandy@cloudera.com>
+Date:   Tue Jun 11 10:50:20 2013 -0700
+
+    CLOUDERA-BUILD. Updating for 5.0.0 development
+
+commit 2e01e27e5ba4ece19650484f646fac42596250ce
+Author: Arun Murthy <acmurthy@apache.org>
+Date:   Tue Oct 8 02:13:58 2013 +0000
+
+    Reverting HDFS-5307 & HDFS-5317 from branch-2.2.0 since rc0 for hadoop-2.2.0 is already out.
+    
+    git-svn-id: https://svn.apache.org/repos/asf/hadoop/common/branches/branch-2.2.0@1530132 13f79535-47bb-0310-9956-ffa450edef68
